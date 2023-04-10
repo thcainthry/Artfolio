@@ -8,14 +8,14 @@ function Navbar(){
              <div>
 
                 <ul id ="navbar">
-                    <li><a href ="">Home</a></li>
+                    <li><a href ="/Home">Home</a></li>
                     <li><a href ="">Auction</a></li>
                     <li><a href ="">Buy</a></li>
                     <li><a href ="">Collections</a></li>
                     <li><a href ="">Exhibitions</a></li>
-                    <li><a href ="">About the Artist</a></li>
-                    <li><a href ="">Contact Us</a></li>
-                    <li><a href ="">Sign up</a></li>
+                    <li><a href ="/About">About the Artist</a></li>
+                    <li><a href ="/Contact">Contact Us</a></li>
+                    <li><a href ="/LandingPage">Sign up</a></li>
                     
                 </ul>
              </div>
