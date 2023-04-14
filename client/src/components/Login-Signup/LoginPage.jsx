@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import ForgetPasswordPage from './ForgetPasswordPage.jsx';
-
-
 import './log-register.css'
 
 export default function SignInPage() {
+    
     return (
         <div className="text-center m-5-auto">
             <h2>Sign in to us</h2>
@@ -16,7 +15,9 @@ export default function SignInPage() {
                 </p>
                 <p>
                     <label>Password</label>
-                    <Link to="/ForgetPasswordPage" element={<ForgetPasswordPage />}><label className="right-label">Forget password?</label></Link>
+                    <a href="/ForgetPasswordPage" element={<ForgetPasswordPage />}>
+                        <label className="right-label">Forget password?</label>
+                        </a>
                     <br/>
                     <input type="password" name="password" required />
                 </p>
@@ -25,8 +26,8 @@ export default function SignInPage() {
                 </p>
             </form>
             <footer>
-                <p>First time? <Link to="/register">Create an account</Link>.</p>
-                <p><Link to="/">Back to Homepage</Link>.</p>
+                <p>First time? <a href='/SignUp'>Create an account</a>.</p>
+                <p><a href="/">Back to Homepage</a>.</p>
             </footer>
         </div>
     )

@@ -76,7 +76,13 @@ body {
 
 /***    Login Page     ***/
 h2 {
-    font-weight: 300
+    font-weight: 300;
+    text-align: center;
+
+    
+}
+h5 {
+    text-align: center;
 }
 
 form {
@@ -97,7 +103,8 @@ form label {
 
 .right-label {
     float: right;
-    cursor: pointer
+    cursor: pointer;
+    
 }
 
 input {
@@ -125,19 +132,9 @@ input {
 
 footer p {
     margin: 0;
-    font-size: .9rem
+    font-size: .9rem;
+    text-align: center;
+
 }
 
-/***    Register Page     ***/
-#checkbox {
-    width: 1rem
-}
-
-form span {
-    font-size: .8rem
-}
-
-#reset_pass_lbl {
-    float: left
-}
 

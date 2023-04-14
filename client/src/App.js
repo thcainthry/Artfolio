@@ -1,8 +1,11 @@
 import React from "react";
 import Home from './components/Pages/Home.jsx';
-import LandingPage from './components/Pages/LandingPage.jsx';
-import About from './components/Pages/About.jsx';
+//import About from './components/Pages/About.jsx';
 import Contact from './components/Pages/Contact.jsx';
+import LandingPage from './components/Pages/LandingPage.jsx'
+import LoginPage from './components/Login-Signup/LoginPage.jsx'
+import SignUp from './components/Login-Signup/SignUp.jsx'
+import ForgetPasswordPage from './components/Login-Signup/ForgetPasswordPage.jsx'
 
 
 
@@ -12,7 +15,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
 
 export default function App() {
@@ -22,8 +25,10 @@ export default function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/LandingPage" component={LandingPage} />
-          <Route path="/About" component={About} />
+          <Route exact path="/LandingPage" component={ LandingPage } />
+          <Route path="/LoginPage" component={ LoginPage } />
+          <Route path="/SignUp" component={ SignUp } />
+          <Route path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
           <Route path="/Contact" component={Contact} />
         </Switch>
       </div>
@@ -31,4 +36,3 @@ export default function App() {
   );
 }
  
-
