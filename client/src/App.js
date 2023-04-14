@@ -1,6 +1,7 @@
 import React from "react";
 import Home from './components/Pages/Home.jsx';
 //import About from './components/Pages/About.jsx';
+import Exhibition from './components/Pages/Exhibiton.jsx';
 import Contact from './components/Pages/Contact.jsx';
 import LandingPage from './components/Pages/LandingPage.jsx'
 import LoginPage from './components/Login-Signup/LoginPage.jsx'
@@ -25,6 +26,7 @@ export default function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/Exhibition" component={Exhibition}/>
           <Route exact path="/LandingPage" component={ LandingPage } />
           <Route path="/LoginPage" component={ LoginPage } />
           <Route path="/SignUp" component={ SignUp } />

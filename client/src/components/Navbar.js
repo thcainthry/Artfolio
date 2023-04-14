@@ -12,7 +12,7 @@ function Navbar(){
                     <li><a href ="">Auction</a></li>
                     <li><a href ="">Buy</a></li>
                     <li><a href ="">Collections</a></li>
-                    <li><a href ="">Exhibitions</a></li>
+                    <li><a href ="/Exhibition">Exhibitions</a></li>
                     <li><a href ="/About">About the Artist</a></li>
                     <li><a href ="/Contact">Contact Us</a></li>
                     <li><a href ="/LandingPage">Sign up</a></li>
