@@ -9,9 +9,9 @@ function Navbar(){
 
                 <ul id ="navbar">
                     <li><a href ="/Home">Home</a></li>
-                    <li><a href ="">Auction</a></li>
-                    <li><a href ="">Buy</a></li>
-                    <li><a href ="">Collections</a></li>
+                    <li><a href ="/">Auction</a></li>
+                    <li><a href ="/">Buy</a></li>
+                    <li><a href ="/">Collections</a></li>
                     <li><a href ="/Exhibition">Exhibitions</a></li>
                     <li><a href ="/About">About the Artist</a></li>
                     <li><a href ="/Contact">Contact Us</a></li>

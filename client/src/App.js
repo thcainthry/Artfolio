@@ -11,6 +11,7 @@ import ForgetPasswordPage from './components/Login-Signup/ForgetPasswordPage.jsx
 
 
 import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
 
 import {
   BrowserRouter as Router,
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
           <Route path="/Contact" component={Contact} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

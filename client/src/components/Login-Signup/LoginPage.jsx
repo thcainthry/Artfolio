@@ -25,7 +25,7 @@ export default function SignInPage() {
                     <button id="sub_btn" type="submit">Login</button>
                 </p>
             </form>
-            <footer>
+            <footer className="fot">
                 <p>First time? <a href='/SignUp'>Create an account</a>.</p>
                 <p><a href="/">Back to Homepage</a>.</p>
             </footer>
