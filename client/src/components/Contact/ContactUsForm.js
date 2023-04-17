@@ -1,18 +1,29 @@
 import React, { useState } from 'react';
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
-const ContactUsForm = ({ handleSubmit }) => {
+const ContactUsForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
 
   const isFormValid = () => {
-    return name && email && message;
+    return name !== '' && email !== '' && message !== '';
   }
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    handleSubmit();
-  }
+    try {
+      await axios.post("http://localhost:5000/ContactUsForm", { name, email, message });
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+      setError(true)
+    }
+  };
 
   return (
     <form onSubmit={handleFormSubmit}>
@@ -49,6 +60,7 @@ const ContactUsForm = ({ handleSubmit }) => {
         />
       </div>
       <button type="submit" disabled={!isFormValid()}>Send</button>
+      {error && <p>There was an error submitting the form. Please try again later.</p>}
     </form>
   );
 };
