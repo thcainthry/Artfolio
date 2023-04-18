@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
+//import { Link, useNavigate } from "react-router-dom";
 
 const ContactUsForm = () => {
   const [name, setName] = useState('');
@@ -8,17 +9,17 @@ const ContactUsForm = () => {
   const [message, setMessage] = useState('');
   const [error, setError] = useState(false);
 
-  const navigate = useNavigate();
+ //const navigate = useNavigate();
 
   const isFormValid = () => {
     return name !== '' && email !== '' && message !== '';
   }
 
-  const handleFormSubmit = async (e) => {
+ const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:5000/ContactUsForm", { name, email, message });
-      navigate("/");
+      //nvigate("/");
     } catch (err) {
       console.log(err);
       setError(true)
