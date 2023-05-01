@@ -1,5 +1,5 @@
 import React from 'react';
-import "./ExhibitonStyles.css";
+import "../style/ExhibitonStyles.css";
 function Exhibition() {
   return (
     <div>

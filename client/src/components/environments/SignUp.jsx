@@ -1,4 +1,4 @@
-import './SignUpStyle.css';
+import '../style/SignUpStyle.css';
 import React, { useState } from 'react';
 
 function SignUp() {
@@ -14,7 +14,7 @@ function SignUp() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} action='http://localhost:5000/register'>
       <h1 id ="title">Sign Up</h1>
       <label>
         First Name:

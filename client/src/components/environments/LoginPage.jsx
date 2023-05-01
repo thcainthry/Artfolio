@@ -1,14 +1,14 @@
 import React from 'react'
 
 import ForgetPasswordPage from './ForgetPasswordPage.jsx';
-import './log-register.css'
+import '../style/log-register.css'
 
 export default function SignInPage() {
     
     return (
         <div className="text-center m-5-auto">
             <h2>Sign in to us</h2>
-            <form action="/home">
+            <form action="hyyp://localhost:3000/login">
                 <p>
                     <label>Username or email address</label><br/>
                     <input type="text" name="first_name" required />

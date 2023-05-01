@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './log-register.css'
+import '../style/log-register.css'
 
 export default function ForgetPasswordPage() {
     return (

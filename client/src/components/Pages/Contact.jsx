@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import ContactUsForm from '../Contact/ContactUsForm.js';
-import ContactUsSubmitted from '../Contact/ContactUsSubmitted.js';
-import '../Contact/ContactUs.css';
+import ContactUsForm from '../environments/ContactUsForm.js';
+import ContactUsSubmitted from '../environments/ContactUsSubmitted.js';
+import '../style/ContactUs.css';
 
 const ContactUs = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);

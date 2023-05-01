@@ -1,12 +1,12 @@
 import React from 'react'
 
-import LoginPage from '../Login-Signup/LoginPage.jsx';
-import SignUp from '../Login-Signup/SignUp.jsx';
+import LoginPage from '../environments/LoginPage.jsx';
+import SignUp from '../environments/SignUp.jsx';
 
 
 
 
-import '../Login-Signup/log-register.css'
+import '../style/log-register.css'
 import BackgroundImage from '../assets/bg.png'
 
 export default function LandingPage() {

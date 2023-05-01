@@ -1,17 +1,17 @@
 import React from "react";
-import Home from './components/Pages/Home.jsx';
+import Home from './components/environments/Home.js';
 //import About from './components/Pages/About.jsx';
-import Exhibition from './components/Pages/Exhibiton.jsx';
-import Contact from './components/Pages/Contact.jsx';
-import LandingPage from './components/Pages/LandingPage.jsx'
-import LoginPage from './components/Login-Signup/LoginPage.jsx'
-import SignUp from './components/Login-Signup/SignUp.jsx'
-import ForgetPasswordPage from './components/Login-Signup/ForgetPasswordPage.jsx'
+import Exhibition from './components/pages/Exhibiton.jsx';
+import Contact from './components/pages/Contact.jsx';
+import LandingPage from './components/pages/LandingPage.jsx'
+import LoginPage from './components/environments/LoginPage.jsx'
+import SignUp from './components/environments/SignUp.jsx'
+import ForgetPasswordPage from './components/environments/ForgetPasswordPage.jsx'
 
 
 
-import Navbar from "./components/Navbar.js";
-import Footer from "./components/Footer.js";
+import Navbar from "./components/environments/Navbar.js";
+import Footer from "./components/environments/Footer.js";
 
 import {
   BrowserRouter as Router,
