@@ -1,9 +1,9 @@
 import React from "react";
-import Home from './components/environments/Home.js';
-//import About from './components/Pages/About.jsx';
-import Exhibition from './components/pages/Exhibiton.jsx';
-import Contact from './components/pages/Contact.jsx';
-import LandingPage from './components/pages/LandingPage.jsx'
+import Home from './components/Pages/Home.jsx';
+import About from './components/Pages/About.jsx';
+import Exhibition from './components/Pages/Exhibiton.jsx';
+import Contact from './components/Pages/Contact.jsx';
+import LandingPage from './components/Pages/LandingPage.jsx'
 import LoginPage from './components/environments/LoginPage.jsx'
 import SignUp from './components/environments/SignUp.jsx'
 import ForgetPasswordPage from './components/environments/ForgetPasswordPage.jsx'
@@ -27,6 +27,7 @@ export default function App() {
         <Navbar />
         <Switch>
           <Route exact path="/Home" component={Home} />
+          <Route exact path="/About" component={About}/>
           <Route exact path="/Exhibition" component={Exhibition}/>
           <Route exact path="/LandingPage" component={ LandingPage } />
           <Route path="/LoginPage" component={ LoginPage } />

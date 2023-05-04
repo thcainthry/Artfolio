@@ -1,0 +1,103 @@
+/* About.css */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.profile img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.profile-info h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile-info p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.capabilities {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-content li {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.resume {
+  display:block;
+  margin: 10px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.resume a {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin: 20px;
+  transition: all 0.3s ease;
+}
+
+.resume a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.resume button {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+  background-color: #333;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.resume button:hover {
+  background-color: #666;
+}
