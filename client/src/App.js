@@ -7,7 +7,10 @@ import LandingPage from './components/Pages/LandingPage.jsx'
 import LoginPage from './components/environments/LoginPage.jsx'
 import SignUp from './components/environments/SignUp.jsx'
 import ForgetPasswordPage from './components/environments/ForgetPasswordPage.jsx'
+<<<<<<< HEAD
 //import Navbar from "./components/Navbar";
+=======
+>>>>>>> 4e9cf939bb57e99591efc9dfeddc3d6e0d56598a
 
 
 import Navbar from "./components/environments/Navbar.js";
