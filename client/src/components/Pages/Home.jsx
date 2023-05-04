@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/Home.css';
+import '../Home/Home.css';
 import Exhibition from './Exhibiton';
 
 const HomePage = () => {

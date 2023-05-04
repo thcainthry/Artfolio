@@ -1,6 +1,6 @@
 export const config = {
-    user: 'admin',
-    password: 'admin123',
+    user: 'sqluser',
+    password: 'password',
     host: 'localhost',
     database: 'artfolio'
 }

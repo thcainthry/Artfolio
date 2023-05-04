@@ -1,8 +1,8 @@
 import{
     config
-} from './credentials.js'
+} from './credentials.mjs'
 
-const mysql = require('mysql');
+import mysql from 'mysql';
 const con = mysql.createConnection(
     {
         user: config.user,
@@ -14,5 +14,5 @@ const con = mysql.createConnection(
 
 con.connect(function(err){
     if(err) throw err;
-    console.log("Conected!");
+    console.log("Connected to database.");
 });
