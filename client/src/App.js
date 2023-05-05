@@ -8,8 +8,8 @@ import LoginPage from './components/environments/LoginPage.jsx'
 import SignUp from './components/environments/SignUp.jsx'
 import ForgetPasswordPage from './components/environments/ForgetPasswordPage.jsx'
 
-
-
+import "./styles.css";
+ 
 
 import Navbar from "./components/environments/Navbar.js";
 import Footer from "./components/environments/Footer.js";
