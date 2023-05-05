@@ -30,7 +30,7 @@ class Navbar extends Component{
              </div>
              <div id="mobile" onClick={this.handleClick}>
                 <i id ="bar"
-                className={this.state.clicked ? "fas fa-time":"fas fa-bars"
+                className={this.state.clicked ? "fas fa-times":"fas fa-bars"
                }></i>
                 <i className="fas fa-times"></i>
              </div>
