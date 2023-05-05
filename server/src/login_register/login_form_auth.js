@@ -8,7 +8,7 @@ const mysql = require('mysql');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-const app = express();ioioiioioioiioioioiioi
+const app = express();
 const port = 5000;
 
 const connection = mysql.createConnection({
