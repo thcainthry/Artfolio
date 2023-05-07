@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Home.css';
-import Exhibition from '../Pages/Exhibiton';
+import Exhibition from './Exhibition.jsx';
 
 const HomePage = () => {
   return (

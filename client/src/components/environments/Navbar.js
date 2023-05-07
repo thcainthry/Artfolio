@@ -1,41 +1,46 @@
 import { Component } from "react";
 import "../style/NavbarStyles.css";
 
+
 class Navbar extends Component{
     state={clicked:false};
     handleClick = () =>{
         this.setState({clicked:
         !this.state.clicked})
     }
+
     render(){
 
     return(
-        <nav>
-  <a href="index.html">
-    <img src="1.png" alt="Logo" width="55" height="54" viewBox="0 0 55 54" fill="none" />
-  </a>
-             <div>
-
-                <ul id ="navbar" className={this.stateClicked? "#navbar active" : "#navbar"}>
-                    <li><a href ="/Home">Home</a></li>
-                    <li><a href ="/">Auction</a></li>
-                    <li><a href ="/">Buy</a></li>
-                    <li><a href ="/">Collections</a></li>
-                    <li><a href ="/Exhibition">Exhibitions</a></li>
-                    <li><a href ="/About">About the Artist</a></li>
-                    <li><a href ="/Contact">Contact Us</a></li>
-                    <li><a href ="/LandingPage">Sign up</a></li>
-                    
-                </ul>
-             </div>
-             <div id="mobile" onClick={this.handleClick}>
-                <i id ="bar"
-                className={this.state.clicked ? "fas fa-times":"fas fa-bars"
-               }></i>
-                <i className="fas fa-times"></i>
-             </div>
+        <div className={"nav"}>
+        <input type="checkbox" id="nav-check"></input>
+        <div className={"nav-header"}>
+          <div className={"nav-title"}>
+            <img src="logo.png" alt="logo" width="50px" height="50px"></img>
+          </div>
+        </div>
+        <div className={"nav-btn"}>
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
         
-        </nav>
+        <div className={"nav-links"}>
+                    <a href="/Home">Home</a>
+                    <a href ="/">Auction</a>
+                    <a href ="/">Buy</a>
+                    <a href ="/">Collections</a>
+                    <a href ="/Exhibition">Exhibitions</a>
+                    <a href ="/About">About the Artist</a>
+                    <a href ="/Contact">Contact Us</a>
+                    <a href ="/LandingPage">Sign up</a>
+        </div>
+      </div>
+        
+        
+        
     )
 }
 }
