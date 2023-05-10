@@ -4,9 +4,9 @@ import About from './components/pages/About.jsx';
 import Exhibition from './components/pages/Exhibition.jsx';
 import Contact from './components/pages/Contact.jsx';
 import LandingPage from './components/pages/LandingPage.jsx'
-import LoginPage from './components/environments/LoginPage.jsx'
-import SignUp from './components/environments/SignUp.jsx'
-import ForgetPasswordPage from './components/environments/ForgetPasswordPage.jsx'
+import LoginPage from './components/pages/LoginPage.jsx'
+import SignUp from './components/pages/SignUp.jsx'
+import ForgetPasswordPage from './components/pages/ForgetPasswordPage.jsx'
 
 import "./styles.css";
  
