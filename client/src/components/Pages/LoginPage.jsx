@@ -24,11 +24,12 @@ function LoginForm() {
   return (
     <div className="text-center m-5-auto">
       <h2>Sign in to us</h2>
+
       <form className="l" onSubmit={handleLogin}>
         <p>
           <label className="l">Username or email address</label>
           <br />
-          <input className="l"
+
             type="text"
             name="username"
             value={user}
@@ -37,9 +38,11 @@ function LoginForm() {
           />
         </p>
         <p>
+
           <label className="l">Password</label>
           <br />
           <input className="l" type="password" name="password" required />
+
         </p>
         <p>
           <button id="sub_btn" type="submit">
