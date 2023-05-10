@@ -1,10 +1,5 @@
 import React from 'react';
 import '../style/About.css';
-<<<<<<< HEAD
-import Contact from './Contact.jsx';
-import painterPic from '../assets/profilePicture.jpg'
-import Resume from '../assets/Resume- Albiona Berisha.pdf'
-=======
 import painterPic from '../../files/images/about_img.jpg'
 import atachFile from '../../files/images/pin.png'
 
@@ -23,7 +18,6 @@ const onClickDownload = () => {
 
 
 
->>>>>>> about_artist
 function About() {
   return (
 
@@ -45,36 +39,6 @@ function About() {
         </div>
       </div>
       
-<<<<<<< HEAD
-      <div className="capabilities">
-        <div className="section-title">Të tjera</div>
-        <div className="section-subtitle">Trajnimet</div>
-        <div className="section-content">
-        <ul>
-  <li>Mendimi kritik (BONEVET, mbështetur nga CDF-BRICK).</li>
-  <li>Trajnim për trajnerë - Internet Security (kamp 3 ajvor, i mbështetur nga CDF, Ferizaj).</li>
-  <li>Videmokracia (Projekti i prezantuar nga BLINK, program nga Erasmus+).</li>
-  <li>Trajnime pwr udhwheqje, hartim dhe zbatim tw projekteve (Mbwshtetur nga CDF, realizuar nga KYC, Ferizaj).</li>
-</ul>
-
-        </div>
-        <div className="section-subtitle">Aftësitë</div>
-        <div className="section-content">
-         <ul>
-          <li>Kapacitet akomodues.</li>
-<li>Aftësi komunikuese.</li>
-<li>Aftësi artistike.</li>
-<li>Aftësi bashkëpunuese.</li>
-         </ul>
-        </div>
-      </div>
-      <div className="resume">
-      <a href={Resume} download="Resume" target='_blank'>Download Resume</a>
-      <a href="/Contact" element={<Contact />}>Contact Albiona Berisha</a>
-      </div>
-
-=======
->>>>>>> about_artist
     
   );
 };
