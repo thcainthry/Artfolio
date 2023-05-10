@@ -85,7 +85,9 @@ h5 {
     text-align: center;
 }
 
-form {
+.l form  {
+    justify-content: center;
+    align-items: center;
     display: inline-block;
     background: #f3f3f3;
     border: 1px solid #ddd;
@@ -94,20 +96,20 @@ form {
     margin: 2rem 0 1rem 0
 }
 
-form label {
+.l form label {
     float: left;
-    font-size: .9rem;
+    font-size: .4rem;
     margin: 0;
     padding: 0
 }
 
-.right-label {
+.l .right-label {
     float: right;
     cursor: pointer;
     
 }
 
-input {
+.l input {
     width: 15rem;
     padding: .3rem;
     border-radius: 5px;

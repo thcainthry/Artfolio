@@ -1,34 +1,70 @@
-import React from 'react'
+import { useState, createContext, useContext } from "react";
 
-import ForgetPasswordPage from './ForgetPasswordPage.jsx';
-import '../style/log-register.css'
+const UserContext = createContext();
 
 export default function SignInPage() {
-    
-    return (
-        <div className="text-center m-5-auto">
-            <h2>Sign in to us</h2>
-            <form action="hyyp://localhost:3000/login">
-                <p>
-                    <label>Username or email address</label><br/>
-                    <input type="text" name="first_name" required />
-                </p>
-                <p>
-                    <label>Password</label><br/>
-                    <input type="password" name="password" required />
-                </p>
-                <p>
-                    <button id="sub_btn" type="submit">Login</button>
-                    <p className='pp'>or</p>
-                    <a href="/ForgetPasswordPage" element={<ForgetPasswordPage />}>
-                        <label className="right-label">Forget password?</label>
-                        </a>
-                </p>
-            </form>
-            <footer className="fot">
-                <p>First time? <a href='/SignUp'>Create an account</a>.</p>
-                <p><a href="/">Back to Homepage</a>.</p>
-            </footer>
-        </div>
-    )
+  const [user, setUser] = useState("");
+
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      <LoginForm />
+    </UserContext.Provider>
+  );
+}
+
+function LoginForm() {
+  const { user, setUser } = useContext(UserContext);
+
+  function handleLogin(event) {
+    event.preventDefault();
+    // handle login logic
+    setUser("John Doe");
+  }
+
+  return (
+    <div className="text-center m-5-auto">
+      <h2>Sign in to us</h2>
+      <form className="l" onSubmit={handleLogin}>
+        <p>
+          <label className="l">Username or email address</label>
+          <br />
+          <input className="l"
+            type="text"
+            name="username"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+            required
+          />
+        </p>
+        <p>
+          <label className="l">Password</label>
+          <br />
+          <input className="l" type="password" name="password" required />
+        </p>
+        <p>
+          <button id="sub_btn" type="submit">
+            Login
+          </button>
+          <p className="pp">or</p>
+          <ForgetPasswordLink />
+        </p>
+      </form>
+      <footer className="fot">
+        <p>
+          First time? <a href="/SignUp">Create an account</a>.
+        </p>
+        <p>
+          <a href="/">Back to Homepage</a>.
+        </p>
+      </footer>
+    </div>
+  );
+}
+
+function ForgetPasswordLink() {
+  return (
+    <a href="/ForgetPasswordPage">
+      <label className="right-label">Forget password?</label>
+    </a>
+  );
 }

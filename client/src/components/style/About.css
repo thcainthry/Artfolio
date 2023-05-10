@@ -20,14 +20,18 @@
   object-fit: cover;
   margin-right: 20px;
 }
-
+.profile-info{
+  width: 800px;
+}
 .profile-info h1 {
+  margin-left: 30px;
   font-size: 36px;
   margin-bottom: 20px;
   color: #333;
 }
 
 .profile-info p {
+  margin-left: 30px;
   font-size: 18px;
   line-height: 1.5;
   color: #666;
@@ -63,7 +67,7 @@
 
 .resume {
   display:block;
-  margin: 10px;
+  margin-bottom: 70px;
   flex-direction: row;
   align-items: center;
 }

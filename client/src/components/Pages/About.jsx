@@ -1,7 +1,8 @@
 import React from 'react';
 import '../style/About.css';
+import Contact from './Contact.jsx';
 import painterPic from '../assets/profilePicture.jpg'
-
+import Resume from '../assets/Resume- Albiona Berisha.pdf'
 function About() {
   return (
     <div className="about">
@@ -41,8 +42,8 @@ function About() {
         </div>
       </div>
       <div className="resume">
-        <a href="">Download Resume</a>
-        <button>Contact Albiona Berisha</button>
+      <a href={Resume} download="Resume" target='_blank'>Download Resume</a>
+      <a href="/Contact" element={<Contact />}>Contact Albiona Berisha</a>
       </div>
 
     
