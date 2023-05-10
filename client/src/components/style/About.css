@@ -1,4 +1,4 @@
-/* About.css */
+/* About.css
 
 .about {
   display: flex;
@@ -104,4 +104,35 @@
 
 .resume button:hover {
   background-color: #666;
+} */
+.container{
+  padding: 5%;
+}
+.container>img{
+  padding-right: 2%;
+}
+.text>p{
+  padding: 2%;
+}
+.text>h3{
+  padding: 2%;
+}
+.cv_download{
+  padding: 2%;
+  height: fit-content;
+  float: right;
+  padding-bottom: 10%;
+}
+.cv_download:hover{
+  text-decoration: underline;
+}
+.fotoja_pin{
+  width: 25px;
+  height: 25px;
+  float: right;
+}
+.fotoja_pin:hover{
+  background-color: darkgray;
+  border-radius: 50%;
+  text-decoration: underline;
 }

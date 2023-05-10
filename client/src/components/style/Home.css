@@ -1,7 +1,11 @@
 
   .container {
     position: relative;
+<<<<<<< HEAD
     height: 100; /* set the container height to fill the viewport height */
+=======
+    height: auto; /* set the container height to fill the viewport height */
+>>>>>>> about_artist
   }
   
   .bg-image {

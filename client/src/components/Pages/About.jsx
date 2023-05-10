@@ -1,24 +1,51 @@
 import React from 'react';
 import '../style/About.css';
+<<<<<<< HEAD
 import Contact from './Contact.jsx';
 import painterPic from '../assets/profilePicture.jpg'
 import Resume from '../assets/Resume- Albiona Berisha.pdf'
+=======
+import painterPic from '../../files/images/about_img.jpg'
+import atachFile from '../../files/images/pin.png'
+
+
+const onClickDownload = () => {
+  fetch("../../files/Resume_Albiona Berisha.pdf").then(response => {
+    response.blob().then(blob => {
+      const fileUrl = window.URL.createObjectURL(blob);
+      let alink = document.createElement("a");
+      alink.href = fileUrl;
+      alink.download = "Resume_Albiona Berisha.pdf";
+      alink.click();
+    });
+  });
+};
+
+
+
+>>>>>>> about_artist
 function About() {
   return (
-    <div className="about">
-      <div className="profile">
-        <img src={painterPic} alt="Albiona Berisha" />
-        <div className="profile-info">
-          <h1>Albiona Berisha</h1>
-          <p>Unë jam një piktore që aftësitë e saj i ka pasur që në moshën gjashtë vjeçare.
-             Që nga ajo moshë kam përmirësuar artin tim në degën e pikturës. 
-             Në vend të kësaj, unë jam dhe një adhuruese e fotografisë, të cilën e praktikoj si një mënyrë për të shprehur ndjenjat e mia përmes saj. 
-             Për mua, arti është gjuha ime e të folurit nëpërmjet imazheve.
 
-</p>
+
+      <div className={"container"}>
+        <img src={painterPic} width="100%" height="100%"></img>
+        <div className={'text'}>
+          <h3>BIO AND CV</h3>
+          <p>Unë jam një piktore që aftësitë e saj i ka pasur që në moshën gjashtë vjeçare. 
+            Që nga ajo moshë kam përmirësuar artin tim në degën e pikturës.              
+            Në vend të kësaj, unë jam dhe një adhuruese e fotografisë, të cilën e praktikoj si një mënyrë për të shprehur ndjenjat e mia përmes saj. 
+            Për mua, arti është gjuha ime e të folurit nëpërmjet imazheve.
+         </p>
+         <div className={'text cv_download'} onClick={onClickDownload}>View and download my CV:
+      
+         <img src={atachFile} className={'fotoja_pin'} onClick={onClickDownload}></img>
+         </div>
+         
         </div>
       </div>
       
+<<<<<<< HEAD
       <div className="capabilities">
         <div className="section-title">Të tjera</div>
         <div className="section-subtitle">Trajnimet</div>
@@ -46,9 +73,9 @@ function About() {
       <a href="/Contact" element={<Contact />}>Contact Albiona Berisha</a>
       </div>
 
+=======
+>>>>>>> about_artist
     
-     
-    </div>
   );
 };
 
