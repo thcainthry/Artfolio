@@ -18,7 +18,7 @@ function LoginForm() {
   function handleLogin(event) {
     event.preventDefault();
     // handle login logic
-    setUser("John Doe");
+    setUser("Choose username");
   }
 
   return (
@@ -29,7 +29,7 @@ function LoginForm() {
         <p>
           <label className="l">Username or email address</label>
           <br />
-
+<input 
             type="text"
             name="username"
             value={user}
