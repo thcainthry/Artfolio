@@ -39,7 +39,7 @@ body {
 .main-title {
     padding-top: 10rem;
     font-size: 5rem;
-    font-family: 'Shadow Into Light Two', cursive;
+    font-family: 'Courier', Bold;
     text-transform: uppercase;
     text-align: center
 }
@@ -90,10 +90,11 @@ h5 {
     align-items: center;
     display: inline-block;
     background: #f3f3f3;
-    border: 1px solid #ddd;
+    border: 1px solid #791616;
     border-radius: 2px;
     padding: 2rem;
-    margin: 2rem 0 1rem 0
+    margin: center;
+
 }
 
 .l form label {
@@ -139,7 +140,7 @@ h5 {
 
 }
 .fot{
-    margin: 10px;
+    margin: 5px;
 }
 footer {
     text-align: center;
