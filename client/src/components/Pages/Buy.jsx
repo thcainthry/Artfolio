@@ -3,7 +3,7 @@ import React, {
 	useEffect,
 } from "react";
 import "../style/main.css";
-import ShoppingCart from "..Pages/ShoppingCart."
+import ShoppingCart from "../Pages/ShoppingCart.jsx";
 
 
 const products = [

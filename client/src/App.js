@@ -31,11 +31,11 @@ export default function App() {
           <Route exact path="/About" component={About}/>
           <Route exact path="/Exhibiton" component={Exhibition}/>
           <Route exact path="/LandingPage" component={ LandingPage } />
-          <Route path="/LoginPage" component={ LoginPage } />
-          <Route path="/Buy" component={ Buy } />
-          <Route path="/SignUp" component={ SignUp } />
-          <Route path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
-          <Route path="/Contact" component={Contact} />
+          <Route exact path="/LoginPage" component={ LoginPage } />
+          <Route exact path="/Buy" component={ Buy } />
+          <Route exact path="/SignUp" component={ SignUp } />
+          <Route exact path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
+          <Route exact path="/Contact" component={Contact} />
         </Switch>
         <Footer />
       </div>
