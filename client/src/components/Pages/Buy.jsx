@@ -3,6 +3,7 @@ import React, {
 	useEffect,
 } from "react";
 import "../style/main.css";
+import ShoppingCart from "..Pages/ShoppingCart."
 
 
 const products = [
@@ -12,7 +13,7 @@ const products = [
 		description:
 			"Vivamus vitae neque accumsan, ultrices nisl et, viverra magna. Fusce nec maximus sem.",
 		price: 199,
-		image: require("./images/lamadre.jpeg"),
+		image: require("../assets/images/ConnectedByBlood/..jpeg"),
 	},
 	{
 		id: 2,
@@ -20,7 +21,7 @@ const products = [
 		description:
 			"Maecenas fermentum urna egestas urna ullamcorper sodales. Sed a enim imperdiet, tempus massa a, iaculis tellus.",
 		price: 229,
-		image: require("../files/images/ConnectedByBlood/myfather'seyes.jpeg"),
+		image: require("../assets/images/ConnectedByBlood/lamadre.jpeg"),
 	},
 	{
 		id: 3,
@@ -28,7 +29,7 @@ const products = [
 		description:
 			"Praesent et orci vel nunc interdum aliquet et non dolor. Etiam eget finibus justo",
 		price: 99,
-		image: require(""),
+		image: require("../assets/images/ConnectedByBlood/myfather'seyes.jpeg"),
 	},
 	{
 		id: 4,
@@ -36,7 +37,7 @@ const products = [
 		description:
 			"Duis nibh sapien, placerat non nulla ac, suscipit laoreet tortor.",
 		price: 119,
-		image: require(""),
+		image: require("../assets/images/EnRouge/DiellaEnRouge.jpeg"),
 	},
 	{
 		id: 5,
@@ -44,7 +45,7 @@ const products = [
 		description:
 			"Phasellus condimentum, ante et dictum placerat, nulla ipsum commodo lorem, ut mollis nibh turpis a metus.",
 		price: 85,
-		image: require(""),
+		image: require("../assets/images/EnRouge/L'filleEnRouge.jpeg"),
 	},
 	{
 		id: 6,
@@ -52,7 +53,7 @@ const products = [
 		description:
 			" Mauris convallis diam nibh, non malesuada enim facilisis non. Etiam sapien augue, molestie a porta sed",
 		price: 149,
-		image: require(""),
+		image: require("../assets/images/EnRouge/SomethingEnRouge.jpeg"),
 	},
 ];
 
