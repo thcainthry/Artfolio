@@ -1,7 +1,7 @@
 import React from 'react'
 
-import LoginPage from '../pages/LoginPage.jsx';
-import SignUp from '../pages/SignUp.jsx';
+import LoginPage from '../Pages/LoginPage.jsx';
+import SignUp from '../Pages/SignUp.jsx';
 
 
 
