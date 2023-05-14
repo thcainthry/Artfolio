@@ -1,7 +1,7 @@
 import React from 'react'
 
-import LoginPage from '../environments/LoginPage.jsx';
-import SignUp from '../environments/SignUp.jsx';
+import LoginPage from './LoginPage.jsx';
+import SignUp from './SignUp.jsx';
 
 
 
