@@ -1,13 +1,14 @@
 import React from "react";
 
-import Home from './components/pages/Home.jsx';
-import About from './components/pages/About.jsx';
-import Exhibition from './components/pages/Exhibition.jsx';
-import Contact from './components/pages/Contact.jsx';
-import LandingPage from './components/pages/LandingPage.jsx';
-import LoginPage from './components/pages/LoginPage.jsx';
-import SignUp from './components/pages/SignUp.jsx';
-import ForgetPasswordPage from './components/pages/ForgetPasswordPage.jsx';
+import Home from './components/Pages/Home.jsx';
+import About from './components/Pages/About.jsx';
+import Exhibition from './components/Pages/Exhibition.jsx';
+import Contact from './components/Pages/Contact.jsx';
+import LandingPage from './components/Pages/LandingPage.jsx';
+import LoginPage from './components/Pages/LoginPage.jsx';
+import SignUp from './components/Pages/SignUp.jsx';
+import ForgetPasswordPage from './components/Pages/ForgetPasswordPage.jsx';
+
 
 
 
