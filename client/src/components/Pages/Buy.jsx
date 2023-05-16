@@ -3,7 +3,7 @@ import React, {
 	useEffect,
 } from "react";
 import "../style/main.css";
-import ShoppingCart from "../Pages/ShoppingCart.jsx";
+import ShoppingCart from "./ShoppingCart.jsx";
 
 
 const products = [
@@ -55,6 +55,31 @@ const products = [
 		price: 149,
 		image: require("../assets/images/EnRouge/SomethingEnRouge.jpeg"),
 	},
+	{
+		id: 7,
+		name: "Vivamus vitae",
+		description:
+			"Vivamus vitae neque accumsan, ultrices nisl et, viverra magna. Fusce nec maximus sem.",
+		price: 199,
+		image: require("../assets/images/Fossils/fossils_2.jpeg"),
+	},
+	{
+		id: 8,
+		name: "Fusce sit amet ipsum",
+		description:
+			"Maecenas fermentum urna egestas urna ullamcorper sodales. Sed a enim imperdiet, tempus massa a, iaculis tellus.",
+		price: 229,
+		image: require("../assets/images/Fossils/fossils_3.jpeg"),
+	},
+	{
+		id: 9,
+		name: "Etiam volutpat aliquam",
+		description:
+			"Praesent et orci vel nunc interdum aliquet et non dolor. Etiam eget finibus justo",
+		price: 99,
+		image: require("../assets/images/Fossils/fossils.jpeg"),
+	},
+	
 ];
 
 function Buy() {
