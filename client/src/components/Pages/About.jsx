@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/About.css';
-import painterPic from '../../files/images/about_img.jpg'
-import atachFile from '../../files/images/pin.png'
+import painterPic from '../../files-img/images/about_img.jpg'
+import atachFile from '../../files-img/images/pin.png'
 
 
 const onClickDownload = () => {
