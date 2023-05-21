@@ -20,6 +20,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   
 } from "react-router-dom";
 
@@ -29,6 +30,9 @@ export default function App() {
       <div className="App">
         <Navbar />
         <Switch>
+        <Route exact path="/">
+            <Redirect to="/Home" />
+          </Route>
           <Route exact path="/Home" component={Home} />
           <Route exact path="/About" component={About}/>
           <Route exact path="/Exhibition" component={Exhibition}/>
