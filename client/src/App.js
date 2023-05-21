@@ -1,7 +1,15 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import DashboardLayout from '../src/Layouts/DashboardLayout.js';
-import PublicRoutesLayout from '../src/Layouts/PublicRoutesLayout.js';
+import React from "react";
+import Home from './components/Pages/Home.jsx';
+import About from './components/Pages/About.jsx';
+import Exhibition from './components/Pages/Exhibition.jsx';
+import Contact from './components/Pages/Contact.jsx';
+import LandingPage from './components/Pages/LandingPage.jsx';
+import LoginPage from './components/Pages/LoginPage.jsx';
+import SignUp from './components/Pages/SignUp.jsx';
+import ForgetPasswordPage from './components/Pages/ForgetPasswordPage.jsx';
+
+
+import Nav from './components/environments/Nav.js';
 import Dashboard from './components/Pages/Dashboard.jsx';
 import Sales from './components/Pages/Sales.jsx';
 import Messages from './components/Pages/Messages.jsx';
@@ -13,37 +21,54 @@ import SingleProduct from './components/Pages/SingleProduct.jsx';
 import Login from './components/Pages/Login.jsx';
 import Page404 from './components/Pages/Page404.jsx';
 import Register from './components/Pages/Register.jsx';
-import { Nav } from 'hero-slider';
 
-const Routes = () => {
+import "./styles.css";
+
+import "./styles.css";
+ 
+
+import Navbar from "./components/environments/Navbar.js";
+import Footer from "./components/environments/Footer.js";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  
+} from "react-router-dom";
+
+export default function App() {
   return (
-    <Switch>
-      <Route exact path={['/dashboard', '/dashboard/sales', '/dashboard/messages', '/dashboard/products', '/dashboard/users', '/dashboard/deliveries', '/dashboard/settings', '/dashboard/products/:id']}>
-        <DashboardLayout>
-          <Switch>
-            <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/dashboard/sales" component={Sales} />
-            <Route exact path="/dashboard/messages" component={Messages} />
-            <Route exact path="/dashboard/products" component={Products} />
-            <Route exact path="/dashboard/users" component={Users} />
-            <Route exact path="/dashboard/deliveries" component={Deliveries} />
-            <Route exact path="/dashboard/settings" component={Settings} />
-            <Route exact path="/dashboard/products/:id" component={SingleProduct} />
-          </Switch>
-        </DashboardLayout>
-      </Route>
-      <Route exact path={['/login', '/register']}>
-        <PublicRoutesLayout>
-          <Switch>
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-          </Switch>
-        </PublicRoutesLayout>
-      </Route>
-      <Route path="*" component={Sales} />
-    </Switch>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route exact path="/Home" component={Home} />
+          <Route exact path="/About" component={About}/>
+          <Route exact path="/Exhibition" component={Exhibition}/>
+          <Route exact path="/LandingPage" component={ LandingPage } />
+          <Route path="/LoginPage" component={ LoginPage } />
+          <Route path="/SignUp" component={ SignUp } />
+          <Route path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
+          <Route path="/Contact" component={Contact} />
+        
+          <Nav />
+          <Route path="/Dashboard" component={Dashboard} />
+            <Route  path="/Sales" component={Sales} />
+            <Route  path="/Messages" component={Messages} />
+            <Route  path="/Products" component={Products} />
+            <Route  path="/Users" component={Users} />
+            <Route  path="/Deliveries" component={Deliveries} />
+            <Route  path="/Settings" component={Settings} />
+            <Route  path="/Products/:id" component={SingleProduct} />
+            <Route  path="/login" component={Login} />
+        <Route  path="/register" component={Register} />
+        <Route path="/Page404" component={Page404} />
+
+        </Switch>
+        <Footer />
+        
+      </div>
+    </Router>
   );
-
-};
-
-export default Routes;
+}
