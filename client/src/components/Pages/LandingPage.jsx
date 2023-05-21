@@ -14,9 +14,9 @@ export default function LandingPage() {
     return (
         <header style={ HeaderStyle }>
             <h1 className="main-title text-center">Join Us</h1>
-            <div className="buttons text-center">
+            <div className="login_buttons">
                 <a href="/LoginPage" element={<LoginPage />}>
-                    <button className="primary-button">log in</button>
+                    <button className="primary-button" id="reg_btn"><span>log in</span></button>
                 </a>
                 <a href="/SignUp" element={<SignUp />}>
                     <button className="primary-button" id="reg_btn"><span>register </span></button>
