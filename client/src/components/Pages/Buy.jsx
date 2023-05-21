@@ -3,7 +3,7 @@ import React, {
 	useEffect,
 } from "react";
 import "../style/main.css";
-import { GiShoppingBag } from "react-icons/gi";
+import {GiShoppingBag}  from "react-icons/gi";
 import ShoppingCart from "./ShoppingCart.jsx";
 
 
