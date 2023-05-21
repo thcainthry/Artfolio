@@ -16,7 +16,8 @@ class Navbar extends Component{
         <input type="checkbox" id="nav-check"></input>
         <div className={"nav-header"}>
           <div className={"nav-title"}>
-            <img src="logo.png" alt="logo" width="50px" height="50px"></img>
+         <img src="logo.png" alt="logo" width="50px" height="50px"></img> 
+            {/* <h4 font-size="30px">Albiona Berisha</h4> */}
           </div>
         </div>
         <div className={"nav-btn"}>

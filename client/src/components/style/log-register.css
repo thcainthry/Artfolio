@@ -39,7 +39,10 @@ body {
 .main-title {
     padding-top: 10rem;
     font-size: 5rem;
+<<<<<<< HEAD
     font-family: 'Courier', Bold;
+=======
+>>>>>>> main
     text-transform: uppercase;
     text-align: center
 }
@@ -73,6 +76,7 @@ body {
   opacity: 1;
   right: 0;
 }
+<<<<<<< HEAD
 
 /***    Login Page     ***/
 h2 {
@@ -153,3 +157,5 @@ footer {
     font-family:'Courier New', Courier, monospace;
     src: url(./fonts/ShadowsIntoLight-Regular.ttf) format('truetype');
   }
+=======
+>>>>>>> main

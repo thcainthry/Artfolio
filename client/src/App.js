@@ -4,10 +4,18 @@ import About from './components/Pages/About.jsx';
 import Exhibition from './components/Pages/Exhibition.jsx';
 import Contact from './components/Pages/Contact.jsx';
 import LandingPage from './components/Pages/LandingPage.jsx';
+<<<<<<< HEAD
 import LoginPage from './components/environments/LoginPage.jsx';
 import SignUp from './components/environments/SignUp.jsx';
 import ForgetPasswordPage from './components/environments/ForgetPasswordPage.jsx';
 import Buy from './components/Pages/Buy.jsx';
+=======
+import LoginPage from './components/Pages/LoginPage.jsx';
+import SignUp from './components/Pages/SignUp.jsx';
+import ForgetPasswordPage from './components/Pages/ForgetPasswordPage.jsx';
+import "./styles.css";
+
+>>>>>>> main
 import "./styles.css";
  
 
@@ -29,7 +37,7 @@ export default function App() {
         <Switch>
           <Route exact path="/Home" component={Home} />
           <Route exact path="/About" component={About}/>
-          <Route exact path="/Exhibiton" component={Exhibition}/>
+          <Route exact path="/Exhibition" component={Exhibition}/>
           <Route exact path="/LandingPage" component={ LandingPage } />
           <Route exact path="/LoginPage" component={ LoginPage } />
           <Route exact path="/Buy" component={ Buy } />
