@@ -13,6 +13,7 @@ import SingleProduct from './components/Pages/SingleProduct.jsx';
 import Login from './components/Pages/Login.jsx';
 import Page404 from './components/Pages/Page404.jsx';
 import Register from './components/Pages/Register.jsx';
+import { Nav } from 'hero-slider';
 
 const Routes = () => {
   return (
@@ -39,9 +40,10 @@ const Routes = () => {
           </Switch>
         </PublicRoutesLayout>
       </Route>
-      <Route path="*" component={Page404} />
+      <Route path="*" component={Sales} />
     </Switch>
   );
+
 };
 
 export default Routes;
