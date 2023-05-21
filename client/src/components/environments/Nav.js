@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import "../style/Nav.modules.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
+import 'boxicons/css/boxicons.min.css';
+import  '../../index1.css'
 
 const Nav = ({children}) => {
 
@@ -12,7 +16,7 @@ const showSideBar = () => {
 
 const links = [
     {
-        url: '/app/dashboard',
+        url: 'dashboard',
         i_class: 'bx bxs-dashboard',
         link_title: 'Dashboard',
         key: 0
@@ -28,31 +32,7 @@ const links = [
         i_class: "bx bxs-user ",
         link_title: "Users",
         key: 2
-    },
-    {
-        url: "sales",
-        i_class: "bx bxs-wallet ",
-        link_title: "Sales",
-        key: 3
-    },
-    {
-        url: "deliveries",
-        i_class: "bx bxs-truck ",
-        link_title: "Deliveries",
-        key: 4
-    },
-    {
-        url: "messages",
-        i_class: "bx bxs-message-dots ",
-        link_title: "Messages",
-        key: 5
-    },
-    {
-        url: "settings",
-        i_class: "bx bxs-cog ",
-        link_title: "Settings",
-        key: 6
-    },
+    }
 ]
 
 
@@ -89,7 +69,7 @@ const links = [
                     <div>
                         <NavLink to={"/"} className="nav_logo">
                             {" "}
-                            <img src="/img/logo.png" alt="logo" className="logo" /> <span className="nav_logo-name">DaPelican</span>{" "}
+                            <img src="../../logo.png" alt="logo" className="logo" /> <span className="nav_logo-name">Artofolio</span>{" "}
                         </NavLink>
                         <div className="nav_list">
                             { links.map((link)=> ( 
