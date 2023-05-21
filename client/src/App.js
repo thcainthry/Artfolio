@@ -1,12 +1,12 @@
 import React from "react";
 import Home from './components/Pages/Home.jsx';
 import About from './components/Pages/About.jsx';
-import Exhibition from './components/pages/Exhibition.jsx';
+import Exhibition from './components/Pages/Exhibition.jsx';
 import Contact from './components/Pages/Contact.jsx';
 import LandingPage from './components/Pages/LandingPage.jsx';
 import LoginPage from './components/Pages/LoginPage.jsx';
 import SignUp from './components/Pages/SignUp.jsx';
-import ForgetPasswordPage from './components/pages/ForgetPasswordPage.jsx';
+import ForgetPasswordPage from './components/Pages/ForgetPasswordPage.jsx';
 import "./styles.css";
 
 import "./styles.css";
