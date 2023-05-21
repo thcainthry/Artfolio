@@ -7,6 +7,7 @@ import LandingPage from './components/Pages/LandingPage.jsx';
 import LoginPage from './components/Pages/LoginPage.jsx';
 import SignUp from './components/Pages/SignUp.jsx';
 import ForgetPasswordPage from './components/Pages/ForgetPasswordPage.jsx';
+import Routers from "./routes.js";
 import "./styles.css";
 
 import "./styles.css";
