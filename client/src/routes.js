@@ -1,21 +1,21 @@
-import { Navigate, useRoutes } from "react-router-dom";
-import DashboardLayout from './Layouts/DashboardLayout.js';
-import Dashboard from './Pages/Dashboard.jsx';
-import Sales from "./Pages/Sales.jsx";
-import Messages from "./Pages/Messages.jsx";
-import Products from "./Pages/Products.jsx";
-import Users from "./Pages/Users.jsx";
-import Deliveries from "./Pages/Deliveries.jsx";
-import Settings from "./Pages/Settings.jsx";
-import SingleProduct from "./Pages/SingleProduct.jsx";
-import PublicRoutesLayout from "./Layouts/PublicRoutesLayout.jsx";
-import Login from "./Pages/Login.jsx";
-import Page404 from "./Pages/Page404.jsx";
-import Register from "./pages/Register.jsx";
+import { Link, Route } from "react-router-dom";
+import DashboardLayout from '../src/Layouts/DashboardLayout.js';
+import Dashboard from './components/Pages/Dashboard.jsx';
+import Sales from "./components/Pages/Sales.jsx";
+import Messages from "./components/Pages/Messages.jsx";
+import Products from "./components/Pages/Products.jsx";
+import Users from "./components/Pages/Users.jsx";
+import Deliveries from "./components/Pages/Deliveries.jsx";
+import Settings from "./components/Pages/Settings.jsx";
+import SingleProduct from "./components/Pages/SingleProduct.jsx";
+import PublicRoutesLayout from "../src/Layouts/PublicRoutesLayout.js";
+import Login from "./components/Pages/Login.jsx";
+import Page404 from "./components/Pages/Page404.jsx";
+import Register from "./components/Pages/Register.jsx";
 
 
 export default function Routers() {
-    return useRoutes([
+    return Route([
         {
             path: "/app",
             element: <DashboardLayout />,
@@ -40,6 +40,6 @@ export default function Routers() {
                 
             ],
         },
-        { path: "*", element: <Navigate to="/page404" replace={true} /> },
+        { path: "*", element: <Link to="/page404" replace={true} /> },
     ]);
 }

@@ -10,7 +10,7 @@ const Page404 = () => {
     </div>
 
     <div>
-        <Link to={'/'}> 
+        <Link to={'/Home'}> 
         <button className='btn btn-danger rounded-pill'> Go Back to Home</button>
         </Link>
     </div>

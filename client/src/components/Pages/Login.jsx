@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { login, checkToken } from '../auth/auth'
+import { useHistory } from 'react-router-dom';
+//import { login, checkToken } from '../auth/auth'
 
 const Year = new Date().getFullYear()
 
 const Login = () => {
 
-const token = checkToken();
+//const token = checkToken();
 
-const navigate = useNavigate()
+const navigate = useHistory()
 
 const initialState = { email: "test@dapelican.com", password: "testpass1234" };
 const [userData, setUserData] = useState(initialState);
@@ -21,14 +21,14 @@ const handleInputChange = (e) => {
 
 const handleSubmit = () => {
     if (userData.email === "test@dapelican.com" && userData.password === "testpass1234") {
-        login();
+       // login();
     } else {
         alert("Wrong Credentials");
     }
 };
 
 useEffect(() => {
-    if (token) navigate("/app/dashboard");
+   // if (token) navigate("/app/dashboard");
     // eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
 
