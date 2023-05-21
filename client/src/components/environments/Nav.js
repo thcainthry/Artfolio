@@ -16,19 +16,19 @@ const showSideBar = () => {
 
 const links = [
     {
-        url: 'dashboard',
+        url: '/dashboard',
         i_class: 'bx bxs-dashboard',
         link_title: 'Dashboard',
         key: 0
     },
     {
-        url: "products",
+        url: "/products",
         i_class: "bx bxs-shopping-bag-alt ",
         link_title: "Products",
         key: 1
     },
     {
-        url: "users",
+        url: "/users",
         i_class: "bx bxs-user ",
         link_title: "Users",
         key: 2

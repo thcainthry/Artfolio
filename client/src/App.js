@@ -14,9 +14,6 @@ import Dashboard from './components/Pages/Dashboard.jsx';
 import Products from './components/Pages/Products.jsx';
 import Users from './components/Pages/Users.jsx';
 
-
-import "./styles.css";
-
 import "./styles.css";
  
 
@@ -31,12 +28,22 @@ import {
 } from "react-router-dom";
 
 export default function App() {
+  const isAdmin = true; 
   return (
     <Router>
-      <div className="App">
-        <Navbar />
         <Switch>
-          <Route exact path="/Home" component={Home} />
+        {isAdmin ? (
+            <>
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/users" component={Users} />
+              <Route path="/product" component={Products} />
+              <Nav />
+            </>
+          ) : (
+            <>
+            <div className="App">
+            <Navbar />
+            <Route exact path="/Home" component={Home} />
           <Route exact path="/About" component={About}/>
           <Route exact path="/Exhibition" component={Exhibition}/>
           <Route exact path="/LandingPage" component={ LandingPage } />
@@ -44,18 +51,13 @@ export default function App() {
           <Route path="/SignUp" component={ SignUp } />
           <Route path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
           <Route path="/Contact" component={Contact} />
-        
-          <Nav />
-          <Route path="/Dashboard" component={Dashboard} />
-          
-            <Route  path="/Products" component={Products} />
-            <Route  path="/Users" component={Users} />
-        
+          <Footer />
+          </div>
+            </>
+            
+          )}
 
         </Switch>
-        <Footer />
-        
-      </div>
     </Router>
   );
 }
