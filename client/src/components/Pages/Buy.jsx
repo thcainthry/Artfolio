@@ -3,84 +3,136 @@ import React, {
 	useEffect,
 } from "react";
 import "../style/main.css";
+import { GiShoppingBag } from "react-icons/gi";
 import ShoppingCart from "./ShoppingCart.jsx";
 
 
 const products = [
 	{
 		id: 1,
-		name: "Vivamus vitae",
-		description:
-			"Vivamus vitae neque accumsan, ultrices nisl et, viverra magna. Fusce nec maximus sem.",
+		name: "..",
 		price: 199,
 		image: require("../assets/images/ConnectedByBlood/..jpeg"),
 	},
 	{
 		id: 2,
-		name: "Fusce sit amet ipsum",
-		description:
-			"Maecenas fermentum urna egestas urna ullamcorper sodales. Sed a enim imperdiet, tempus massa a, iaculis tellus.",
+		name: "Connected By blood",
 		price: 229,
 		image: require("../assets/images/ConnectedByBlood/lamadre.jpeg"),
 	},
 	{
 		id: 3,
-		name: "Etiam volutpat aliquam",
-		description:
-			"Praesent et orci vel nunc interdum aliquet et non dolor. Etiam eget finibus justo",
-		price: 99,
+		name: "My father",
+		price: 499,
 		image: require("../assets/images/ConnectedByBlood/myfather'seyes.jpeg"),
 	},
 	{
 		id: 4,
-		name: "Lorem ipsum dolor",
-		description:
-			"Duis nibh sapien, placerat non nulla ac, suscipit laoreet tortor.",
+		name: "Diella En Rouge",
 		price: 119,
 		image: require("../assets/images/EnRouge/DiellaEnRouge.jpeg"),
 	},
 	{
 		id: 5,
-		name: "Ultrices nisl",
-		description:
-			"Phasellus condimentum, ante et dictum placerat, nulla ipsum commodo lorem, ut mollis nibh turpis a metus.",
-		price: 85,
+		name: "L'fille en Rouge",
+		price: 825,
 		image: require("../assets/images/EnRouge/L'filleEnRouge.jpeg"),
 	},
 	{
 		id: 6,
-		name: "Curabitur in elementum tortor",
-		description:
-			" Mauris convallis diam nibh, non malesuada enim facilisis non. Etiam sapien augue, molestie a porta sed",
+		name: "Something en Rouge",
 		price: 149,
 		image: require("../assets/images/EnRouge/SomethingEnRouge.jpeg"),
 	},
 	{
 		id: 7,
-		name: "Vivamus vitae",
-		description:
-			"Vivamus vitae neque accumsan, ultrices nisl et, viverra magna. Fusce nec maximus sem.",
-		price: 199,
+		name: "Fossils",
+	    price: 199,
 		image: require("../assets/images/Fossils/fossils_2.jpeg"),
 	},
 	{
 		id: 8,
-		name: "Fusce sit amet ipsum",
-		description:
-			"Maecenas fermentum urna egestas urna ullamcorper sodales. Sed a enim imperdiet, tempus massa a, iaculis tellus.",
-		price: 229,
+		name: "Fossils",
+		price:200,
 		image: require("../assets/images/Fossils/fossils_3.jpeg"),
 	},
 	{
 		id: 9,
-		name: "Etiam volutpat aliquam",
-		description:
-			"Praesent et orci vel nunc interdum aliquet et non dolor. Etiam eget finibus justo",
-		price: 99,
+		name: "Fossils",
+		price: 789,
 		image: require("../assets/images/Fossils/fossils.jpeg"),
 	},
+	{
+		id: 10,
+		name: "Double bass player",
+		price: 349,
+		image: require("../assets/images/Instrumentalism/DOUBLEBASSPLAYER.jpeg"),
+	},
+	{
+		id: 11,
+		name: "Foure Bassists",
+		price: 149,
+		image: require("../assets/images/Instrumentalism/FOUEBASSISTS.jpeg"),
+	},
+	{
+		id: 12,
+		name: "Urim's Guitar",
+		price: 199,
+		image: require("../assets/images/Instrumentalism/URIM'SGUITAR.jpeg"),
+	},
+	{
+		id: 13,
+		name: "From The New World",
+		price: 229,
+		image: require("../assets/images/NoCollection/FromTheNewWorld.jpeg"),
+	},
+	{
+		id: 14,
+		name: "Autoportrait",
+		price: 99,
+		image: require("../assets/images/Portraits/AUTOPORTRAIT.jpeg"),
+	},
+	{
+		id: 15,
+		name: "The Guitarist",
+		price: 229,
+		image: require("../assets/images/Portraits/THEGUITARIST.jpeg"),
+	},
+	{
+		id: 16,
+		name: "La traviata",
+		price: 99,
+		image: require("../assets/images/NoCollection/la traviata.jpeg"),
+	},
+	{
+		id: 17,
+		name: "The Painter",
+		price: 300,
+		image: require("../assets/images/Portraits/THEPAINTER.jpeg"),
+	},
+	{
+		id: 18,
+		name: "The Blind and his Orchestra",
+		price: 150,
+		image: require("../assets/images/TheConductorAndHisOrchestra/TheBlindConductorAndHisOrchestra.jpeg"),
+	},
+	{
+		id: 19,
+		name: "Requiem",
+		price: 129,
+		image: require("../assets/images/TheConductorAndHisOrchestra/REQUIEM.jpeg"),
+	},
+	{
+		id: 16,
+		name: "Allegro Con Brio",
+		price: 690,
+		image: require("../assets/images/TheLinesOfTheBlind/AllegroConBrio.jpeg"),
+	},
 	
+
 ];
+
+
 
 function Buy() {
 	const [cartsVisibilty, setCartVisible] =
@@ -155,15 +207,15 @@ function Buy() {
 				}
 				onProductRemove={onProductRemove}
 			/>
-			     
-                 <div className="navbar">
-				       <button
+			<div className="navbar">
+				<h3 className="logo">Products</h3>
+				<button
 					className="btn shopping-cart-btn"
 					onClick={() =>
 						setCartVisible(true)
 					}>
-				
-			 	{productsInCart.length >
+					<GiShoppingBag size={24} />
+					{productsInCart.length >
 						0 && (
 						<span className="product-count">
 							{
@@ -175,8 +227,7 @@ function Buy() {
 			</div>
 			<main>
 				<h2 className="title">
-					Products
-				</h2>
+					 </h2>
 				<div className="products">
 					{products.map((product) => (
 						<div
@@ -195,18 +246,10 @@ function Buy() {
 								{product.name}
 							</h4>
 							
-							<p>
-								{
-									product.description
-								}
-							</p>
-							<span className="product-price">
+				         	<span className="product-price">
 								{product.price}$
 							</span>
 							<div className="buttons">
-								<button className="btn">
-									Detail
-								</button>
 								<button
 									className="btn"
 									onClick={() =>
@@ -226,5 +269,3 @@ function Buy() {
 }
 
 export default Buy;
-
-/*pershkrimet edhe qmimet ja shtoj tani */
