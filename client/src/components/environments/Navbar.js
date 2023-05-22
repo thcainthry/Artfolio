@@ -12,23 +12,23 @@ class Navbar extends Component{
     render(){
 
     return(
-        <div className={"nav"}>
-        <input type="checkbox" id="nav-check"></input>
-        <div className={"nav-header"}>
-          <div className={"nav-title"}>
+        <div className={"navi"}>
+        <input type="checkbox" id="navi-check"></input>
+        <div className={"navi-header"}>
+          <div className={"navi-title"}>
          <img src="logo.png" alt="logo" width="50px" height="50px"></img> 
             {/* <h4 font-size="30px">Albiona Berisha</h4> */}
           </div>
         </div>
-        <div className={"nav-btn"}>
-          <label for="nav-check">
+        <div className={"navi-btn"}>
+          <label for="navi-check">
             <span></span>
             <span></span>
             <span></span>
           </label>
         </div>
         
-        <div className={"nav-links"}>
+        <div className={"navi-links"}>
                     <a href="/Home">Home</a>
                     <a href ="/">Auction</a>
                     <a href ="/Buy">Buy</a>
