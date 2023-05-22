@@ -214,3 +214,73 @@
   overflow: hidden;
   border-top: 1px solid #e9ecef;
 }
+
+
+:root {
+  
+  --nav-width: 4.25rem;
+  --first-color: #092a85;
+  --body-color: #f3f5fa;
+  --grey-color: #637381;
+  --purple-color: #8069f2;
+  --light-color: #eeeeee;
+  --green-color: #00ab55;
+  --light-blue-color: #d6e5fa;
+  --yellow-color: #fcd53b;
+  --blue-color: #265df1;
+  --red-color: #ef5b5b;
+  --normal-font-size: 1rem;
+  --z-fixed: 100;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0 ;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  color: var(--grey-color);
+  font-size: var(--normal-font-size);
+  transition: 0.5s;
+  background-color: var(--body-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: 0 !important;
+}
+
+.ptb-100 {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.pt-100 {
+  padding-top: 6.25rem;
+}
+
+.pt-200 {
+  padding-top: 12.5rem;
+}
+
+.pb-100 {
+  padding-bottom: 6.25rem;
+}
+
+.pb-70 {
+  padding-bottom: 4.4rem;
+}
+
+.page__main {
+  padding-top: 2.25rem;
+}
