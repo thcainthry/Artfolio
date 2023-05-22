@@ -34,7 +34,7 @@ import {
 } from "react-router-dom";
 
 export default function App() {
-  const isAdmin = false; 
+  const isAdmin = true; 
   return (
     <Router>
         <Switch>
@@ -43,7 +43,7 @@ export default function App() {
             <>
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/users" component={Users} />
-              <Route path="/product" component={Products} />
+              <Route path="/products" component={Products} />
               <Nav />
             </>
           ) : (
