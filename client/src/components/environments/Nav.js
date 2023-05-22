@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import "../style/Nav.modules.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.js';
+
 import 'boxicons/css/boxicons.min.css';
 import  '../../index1.css'
 
