@@ -53,7 +53,8 @@ export default function App() {
              <Route exact path="/">
             <Redirect to="/Home" />
           </Route>
-            <Route exact path="/Home" component={Home} />
+          <Route exact path="/Home" component={Home} />
+          <Route exact path="/Buy" component={Buy}/>
           <Route exact path="/About" component={About}/>
           <Route exact path="/Exhibition" component={Exhibition}/>
           <Route exact path="/LandingPage" component={ LandingPage } />
