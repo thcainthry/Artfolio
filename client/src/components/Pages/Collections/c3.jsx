@@ -1,5 +1,5 @@
 import React from "react";
-import ImageZigzag from "./pamja.jsx";
+import ImageZigzag from "./Collections.jsx";
 import img1 from '../../../files/images/Fossils/fossils.jpeg';
 import img2 from '../../../files/images/Fossils/fossils_2.jpeg';
 import img3 from '../../../files/images/Fossils/fossils_3.jpeg';

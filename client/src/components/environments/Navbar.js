@@ -31,7 +31,7 @@ class Navbar extends Component{
         <div className={"navi-links"}>
                     <a href="/Home">Home</a>
                     <a href ="/">Auction</a>
-                    <a href ="/">Buy</a>
+                    <a href ="/Buy">Buy</a>
                     <a href ="/">Collections</a>
                     <a href ="/Exhibition">Exhibitions</a>
                     <a href ="/About">About the Artist</a>

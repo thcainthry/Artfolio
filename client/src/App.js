@@ -9,10 +9,15 @@ import SignUp from './components/Pages/SignUp.jsx';
 import ForgetPasswordPage from './components/Pages/ForgetPasswordPage.jsx';
 
 
+
 import Nav from './components/environments/Nav.js';
 import Dashboard from './components/Pages/Dashboard.jsx';
 import Products from './components/Pages/Products.jsx';
 import Users from './components/Pages/Users.jsx';
+
+import "./styles.css";
+import Buy from './components/Pages/Buy.jsx';
+
 
 import "./styles.css";
  
@@ -24,6 +29,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   
 } from "react-router-dom";
 
@@ -32,6 +38,7 @@ export default function App() {
   return (
     <Router>
         <Switch>
+
         {isAdmin ? (
             <>
               <Route path="/dashboard" component={Dashboard} />
@@ -43,6 +50,9 @@ export default function App() {
             <>
             <div className="App">
             <Navbar />
+             <Route exact path="/">
+            <Redirect to="/Home" />
+          </Route>
             <Route exact path="/Home" component={Home} />
           <Route exact path="/About" component={About}/>
           <Route exact path="/Exhibition" component={Exhibition}/>
@@ -56,6 +66,7 @@ export default function App() {
             </>
             
           )}
+
 
         </Switch>
     </Router>

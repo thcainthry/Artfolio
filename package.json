@@ -21,6 +21,7 @@
         "nodemon": "^2.0.22"
     },
     "dependencies": {
+        "@popperjs/core": "^2.11.7",
         "assert": "^2.0.0",
         "axios": "^1.4.0",
         "bcryptjs": "^2.4.3",
@@ -34,22 +35,29 @@
         "express-async-errors": "^3.1.1",
         "express-mongo-sanitize": "^2.1.0",
         "express-rate-limit": "^6.0.4",
+        "formik": "^2.2.9",
         "helmet": "^5.0.1",
         "hero-slider": "^3.1.0",
         "http-status-codes": "^2.1.4",
         "https-browserify": "^1.0.0",
         "jquery": "^3.6.4",
         "jsonwebtoken": "^9.0.0",
+        "jwt-decode": "^3.1.2",
         "mdb-react-ui-kit": "^6.0.0",
         "mdbootstrap": "^4.20.0",
         "moment": "^2.29.1",
         "mongoose": "^6.0.13",
         "morgan": "^1.10.0",
+
         "react-router-dom": "^6.11.2",
         "react-scripts": "^5.0.1",
+
+        "react-icons": "^4.8.0",
+
         "stream-http": "^3.2.0",
         "url": "^0.11.0",
         "validator": "^13.7.0",
-        "xss-clean": "^0.1.1"
+        "xss-clean": "^0.1.1",
+        "yup": "^1.1.1"
     }
 }

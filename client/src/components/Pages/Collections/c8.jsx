@@ -1,5 +1,5 @@
 import React from "react";
-import ImageZigzag from "./pamja.jsx";
+import ImageZigzag from "./Collections.jsx";
 import img1 from '../../../files/images/TheLinesOfTheBlind/AllegroConBrio.jpeg';
 import img2 from '../../../files/images/TheLinesOfTheBlind/Linverno.jpeg';
 import img3 from '../../../files/images/TheLinesOfTheBlind/OP.16.jpeg';
