@@ -50,9 +50,7 @@ const links = [
                                 Profile
                             </a>
                         </li>
-                        <li>
-                            <hr className="dropdown-divider" />
-                        </li>
+                       
                         <li>
                             <button className="dropdown-item">
                                 Sign out
