@@ -5,6 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
+import ConnectedByBlood from '../assets/images/ConnectedByBlood/lamadre.jpeg';
+import EnRouge from '../assets/images/EnRouge/DiellaEnRouge.jpeg';
+import Fossils from '../assets/images/Fossils/fossils.jpeg';
+import Instrumentalism from '../assets/images/Instrumentalism/DOUBLEBASSPLAYER.jpeg';
+import NoCollection from '../assets/images/NoCollection/la traviata.jpeg';
+import Portraits from '../assets/images/Portraits/AUTOPORTRAIT.jpeg';
 import TheConductorAndHisOrchestra from '../assets/images/TheConductorAndHisOrchestra/REQUIEM.jpeg';
 import TheLinesOfTheBlind from '../assets/images/TheLinesOfTheBlind/AllegroConBrio.jpeg';
 import TheRedBeret from '../assets/images/TheRedBeret/THEGIRLONTHERED.jpeg';
@@ -12,6 +19,10 @@ import TheVanityOfExistence from '../assets/images/TheVanityOfExistence/THEVANIT
 // import '../style/Collections.css';
 // import Card from '@mui/material/Card';
 // import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+// import Typography from '@mui/material/Typography';
+// import { CardActionArea } from '@mui/material';
+// import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
 
 import c1 from '../Pages/Collections/c1.jsx';
 import c2 from '../Pages/Collections/c2.jsx';
