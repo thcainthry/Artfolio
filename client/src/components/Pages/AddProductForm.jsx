@@ -60,7 +60,52 @@ const AddProductForm = () => {
 		]);
 	};
   return (
-    <div className="add-product-form">
+    
+    <div >
+   
+
+      {submittedProduct && (
+				<div className="products">
+					{
+						<div
+							className="product"
+							key={submittedProduct._id}>
+							<img
+								className="product-image"
+								src={
+									URL.createObjectURL(submittedProduct.image)
+								} 
+                alt="Product" 
+							
+							/>
+							<h4 className="product-name">
+								{submittedProduct.name}
+							</h4>
+							
+				         	<span className="product-price">
+								{submittedProduct.price}$
+							</span>
+							<div className="buttons">
+								<button
+									className="btn"
+									onClick={() =>
+										addsubmittedProductToCart(
+											submittedProduct
+										)
+									}>
+									Add to cart
+								</button>
+							</div>
+							
+							
+						</div>
+					}
+				</div>
+      
+      
+        
+      )}
+      
       <form onSubmit={handleSubmit}>
         <h2>Add Product</h2>
         <div className="form-group">
@@ -100,51 +145,11 @@ const AddProductForm = () => {
         </button>
       </form>
       
-      {submittedProduct && (
-        <div className="submitted-product">
-          <h4>Submitted Product:</h4>
-				<div className="products">
-					{
-						<div
-							className="product"
-							key={submittedProduct._id}>
-							<img
-								className="product-image"
-								src={
-									URL.createObjectURL(submittedProduct.image)
-								} 
-                alt="Product" 
-							
-							/>
-							<h4 className="product-name">
-								{submittedProduct.name}
-							</h4>
-							
-				         	<span className="product-price">
-								{submittedProduct.price}$
-							</span>
-							<div className="buttons">
-								<button
-									className="btn"
-									onClick={() =>
-										addsubmittedProductToCart(
-											submittedProduct
-										)
-									}>
-									Add to cart
-								</button>
-							</div>
-							
-							
-						</div>
-					}
-				</div>
-          
-      
-        </div>
-      )}
+     
     </div>
+    
   );
+  
 };
 
 export default AddProductForm;

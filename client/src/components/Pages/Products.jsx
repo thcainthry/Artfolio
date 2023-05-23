@@ -263,8 +263,9 @@ function Buy() {
 						</div>
 					))}
 				</div>
+				<AddProductForm />
 			</main>
-      <AddProductForm />
+     
 		</div>
 	);
 }
