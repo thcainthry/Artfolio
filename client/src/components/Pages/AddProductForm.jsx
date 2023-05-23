@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { GiShoppingBag } from 'react-icons/gi';
+import "../style/main.css";
+import "../style/AddProductForm.css";
 
 const AddProductForm = () => {
   const [newProduct, setNewProduct] = useState({
@@ -35,10 +37,32 @@ const AddProductForm = () => {
       image: null,
     });
   };
+ 
+  
+	const [productsInCart, setProducts] =
+		useState(
+			JSON.parse(
+				localStorage.getItem(
+					"shopping-cart"
+				)
+			) || []
+		);
+	
 
+	const addsubmittedProductToCart = (product) => {
+		const newProduct = {
+			...product,
+			count: 1,
+		};
+		setProducts([
+			...productsInCart,
+			newProduct,
+		]);
+	};
   return (
     <div className="add-product-form">
       <form onSubmit={handleSubmit}>
+        <h2>Add Product</h2>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
@@ -75,12 +99,48 @@ const AddProductForm = () => {
           <span>Add Product</span>
         </button>
       </form>
+      
       {submittedProduct && (
         <div className="submitted-product">
           <h4>Submitted Product:</h4>
-          <p>Name: {submittedProduct.name}</p>
-          <p>Price: {submittedProduct.price}</p>
-          <img src={URL.createObjectURL(submittedProduct.image)} alt="Product" />
+				<div className="products">
+					{
+						<div
+							className="product"
+							key={submittedProduct._id}>
+							<img
+								className="product-image"
+								src={
+									URL.createObjectURL(submittedProduct.image)
+								} 
+                alt="Product" 
+							
+							/>
+							<h4 className="product-name">
+								{submittedProduct.name}
+							</h4>
+							
+				         	<span className="product-price">
+								{submittedProduct.price}$
+							</span>
+							<div className="buttons">
+								<button
+									className="btn"
+									onClick={() =>
+										addsubmittedProductToCart(
+											submittedProduct
+										)
+									}>
+									Add to cart
+								</button>
+							</div>
+							
+							
+						</div>
+					}
+				</div>
+          
+      
         </div>
       )}
     </div>
