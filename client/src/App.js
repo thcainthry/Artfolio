@@ -15,6 +15,7 @@ import "./styles.css";
 
 import Navbar from "./components/environments/Navbar.js";
 import Footer from "./components/environments/Footer.js";
+import Collections from "./components/Pages/Collections.jsx";
 
 import {
   BrowserRouter as Router,
@@ -38,6 +39,7 @@ export default function App() {
           <Route exact path="/SignUp" component={ SignUp } />
           <Route exact path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
           <Route exact path="/Contact" component={Contact} />
+          <Route exact path="/Collections" component={Collections} />
         </Switch>
         <Footer />
       </div>
