@@ -22,8 +22,8 @@ function About() {
   return (
 
 
-      <div className={"container"}>
-        <img src={painterPic} width="100%" height="100%"></img>
+      <div className={"containeri"}>
+        <img src={painterPic} className='imge' ></img>
         <div className={'text'}>
           <h3>BIO AND CV</h3>
           <p>Unë jam një piktore që aftësitë e saj i ka pasur që në moshën gjashtë vjeçare. 
