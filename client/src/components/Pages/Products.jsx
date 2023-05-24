@@ -137,13 +137,6 @@ function Buy() {
     localStorage.setItem("shopping-cart", JSON.stringify(productsInCart));
   }, [productsInCart]);
 
-  const addProductToCart = (product) => {
-    const newProduct = {
-      ...product,
-      count: 1,
-    };
-    setProductsInCart([...productsInCart, newProduct]);
-  };
 
   const onQuantityChange = (productId, count) => {
     setProductsInCart((oldState) => {

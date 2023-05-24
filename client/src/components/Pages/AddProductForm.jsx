@@ -37,75 +37,44 @@ const AddProductForm = () => {
       image: null,
     });
   };
- 
   
-	const [productsInCart, setProducts] =
-		useState(
-			JSON.parse(
-				localStorage.getItem(
-					"shopping-cart"
-				)
-			) || []
-		);
-	
+  const [productsInCart, setProducts] = useState(
+    JSON.parse(localStorage.getItem("shopping-cart")) || []
+  );
 
-	const addsubmittedProductToCart = (product) => {
-		const newProduct = {
-			...product,
-			count: 1,
-		};
-		setProducts([
-			...productsInCart,
-			newProduct,
-		]);
-	};
+  const addsubmittedProductToCart = (product) => {
+    const newProduct = {
+      ...product,
+      count: 1,
+    };
+    setProducts([...productsInCart, newProduct]);
+  };
+
+  const deleteSubmittedProduct = () => {
+    setSubmittedProduct(null);
+  };
+
   return (
-    
-    <div >
-   
-
+    <div>
       {submittedProduct && (
-				<div className="products">
-					{
-						<div
-							className="product"
-							key={submittedProduct._id}>
-							<img
-								className="product-image"
-								src={
-									URL.createObjectURL(submittedProduct.image)
-								} 
-                alt="Product" 
-							
-							/>
-							<h4 className="product-name">
-								{submittedProduct.name}
-							</h4>
-							
-				         	<span className="product-price">
-								{submittedProduct.price}$
-							</span>
-							<div className="buttons">
-								<button
-									className="btn"
-									onClick={() =>
-										addsubmittedProductToCart(
-											submittedProduct
-										)
-									}>
-									Add to cart
-								</button>
-							</div>
-							
-							
-						</div>
-					}
-				</div>
-      
-      
-        
+        <div className="products">
+          <div className="product" key={submittedProduct._id}>
+            <img
+              className="product-image"
+              src={URL.createObjectURL(submittedProduct.image)}
+              alt="Product"
+            />
+            <h4 className="product-name">{submittedProduct.name}</h4>
+            <span className="product-price">{submittedProduct.price}$</span>
+            <div className="buttons">
+              <button className="btn" onClick={deleteSubmittedProduct}>
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
       )}
-      
+
       <form onSubmit={handleSubmit}>
         <h2>Add Product</h2>
         <div className="form-group">
@@ -144,12 +113,8 @@ const AddProductForm = () => {
           <span>Add Product</span>
         </button>
       </form>
-      
-     
     </div>
-    
   );
-  
 };
 
 export default AddProductForm;
