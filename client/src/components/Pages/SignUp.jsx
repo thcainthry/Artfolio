@@ -5,16 +5,16 @@ import { useHistory } from "react-router-dom";
 
 
 function SignUp() {
-  const [Name, setFirstName] = useState('');
-  const [userName, setLastName] = useState('');
+  const [Name, setName] = useState('');
+  const [userName, setuserName] = useState('');
   const [city, setCity] = useState('');
   const [address, setAddress] = useState('');
   const [country, setCountry] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [firstNameError, setFirstNameError] = useState("");
-  const [lastNameError, setLastNameError] = useState("");
+  const [NameError, setNameError] = useState("");
+  const [userNameError, setuserNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [failedRegister,setError]=useState("");
@@ -28,20 +28,20 @@ function SignUp() {
   function handleCountryChange(event) {
     setCountry(event.target.value);
   }
-  function handleFirstNameChange(event) {
-    setFirstName(event.target.value);
-    setFirstNameError("");
+  function handleNameChange(event) {
+    setName(event.target.value);
+    setNameError("");
     const pattern = /^[a-zA-Z0-9]{3,}$/;
     if (!pattern.test(event.target.value)) {
-      setFirstNameError("Name must contain at least 3 alphanumeric characters");
+      setNameError("Name must contain at least 3 alphanumeric characters");
     }
     }
-    function handleLastNameChange(event) {
-      setLastName(event.target.value);
-      setLastNameError("");
+    function handleuserNameChange(event) {
+      setuserName(event.target.value);
+      setuserNameError("");
       const pattern = /^[a-zA-Z0-9]{3,}$/;
       if (!pattern.test(event.target.value)) {
-        setLastNameError("Username must contain at least 3 alphanumeric characters");
+        setuserNameError("Username must contain at least 3 alphanumeric characters");
       }
       }
     
@@ -80,7 +80,7 @@ function SignUp() {
       if (!Name || !userName || !email  || !password || !confirmPassword) {
         setError("Please fill in all required fields");
         return;
-      } else  if (firstNameError || lastNameError || emailError  || passwordError) {
+      } else  if (NameError || userNameError || emailError  || passwordError) {
         setError("Please enter the correct information");
         return;
       }
@@ -142,14 +142,14 @@ return (
     <form onSubmit={handleSubmit} className="register-form">
       <label>
         <div className="label-text">Name:</div>
-        <input type="text" placeholder="Enter Name" value={Name} onChange={handleFirstNameChange} />
-         <div className="error-message">{firstNameError}</div>
+        <input type="text" placeholder="Enter Name" value={Name} onChange={handleNameChange} />
+         <div className="error-message">{NameError}</div>
       </label>
 
       <label>
         <div className="label-text">Username:</div>
-        <input type="text" placeholder="Enter Username" value={userName} onChange={handleLastNameChange} />
-         <div className="error-message">{lastNameError}</div>
+        <input type="text" placeholder="Enter Username" value={userName} onChange={handleuserNameChange} />
+         <div className="error-message">{userNameError}</div>
       </label>
     
       <label>
