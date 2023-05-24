@@ -138,6 +138,8 @@ function SignUp() {
     }
   
 return (
+  <div className='register-reg'>
+    <h1>Register now</h1>
   <div className="register-wrap">
     <form onSubmit={handleSubmit} className="register-form">
       <label>
@@ -199,6 +201,7 @@ return (
       <button type="submit">Register</button>
       <a href="/LoginPage" class="login">Already have an account? Log in!</a>
     </form>
+  </div>
   </div>
 );
 }

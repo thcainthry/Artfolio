@@ -66,7 +66,7 @@ function LoginForm() {
       const userRole = decodedToken.role;
       
       if (userRole === "admin") {
-        history("/home");
+        history("/dashbord");
       } else if (userRole === "member") {
         history("/home");
       } else {
@@ -81,8 +81,17 @@ function LoginForm() {
 
 
   return (
+    
     <div className="login-wrap">
+    
       <form onSubmit={handleSubmit} className="login-form" method="POST">
+      <h2>Login now</h2>
+        <img
+          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+          alt="profile-img"
+          className="profile-img-card"
+        />
+
         <label>
           <div className="label-text">Username:</div>
           <input
