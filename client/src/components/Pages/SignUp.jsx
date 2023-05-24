@@ -5,8 +5,11 @@ import { useHistory } from "react-router-dom";
 
 
 function SignUp() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [Name, setFirstName] = useState('');
+  const [userName, setLastName] = useState('');
+  const [city, setCity] = useState('');
+  const [address, setAddress] = useState('');
+  const [country, setCountry] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -18,12 +21,19 @@ function SignUp() {
   const [succesfulRegister,setSuccess]=useState("");
   const history = useHistory();
   
+  function handleAddressChange(event) {
+    setAddress(event.target.value);
+  }
+  
+  function handleCountryChange(event) {
+    setCountry(event.target.value);
+  }
   function handleFirstNameChange(event) {
     setFirstName(event.target.value);
     setFirstNameError("");
     const pattern = /^[a-zA-Z0-9]{3,}$/;
     if (!pattern.test(event.target.value)) {
-      setFirstNameError("Firstname must contain at least 3 alphanumeric characters");
+      setFirstNameError("Name must contain at least 3 alphanumeric characters");
     }
     }
     function handleLastNameChange(event) {
@@ -31,11 +41,13 @@ function SignUp() {
       setLastNameError("");
       const pattern = /^[a-zA-Z0-9]{3,}$/;
       if (!pattern.test(event.target.value)) {
-        setLastNameError("Lastname must contain at least 3 alphanumeric characters");
+        setLastNameError("Username must contain at least 3 alphanumeric characters");
       }
       }
     
-  
+      function handleCityChange(event) {
+        setCity(event.target.value);
+      }
     function handlePasswordChange(event) {
       setPassword(event.target.value);
       setPasswordError("");
@@ -65,7 +77,7 @@ function SignUp() {
     function handleSubmit(event) {
       event.preventDefault();
   
-      if (!firstName || !lastName || !email  || !password || !confirmPassword) {
+      if (!Name || !userName || !email  || !password || !confirmPassword) {
         setError("Please fill in all required fields");
         return;
       } else  if (firstNameError || lastNameError || emailError  || passwordError) {
@@ -82,10 +94,13 @@ function SignUp() {
   
       // Send request to server using Axios
       axios.post("/auth/signup", {
-        firstName,
-        lastName,
+        Name,
+        userName,
         email,
         password,
+        address,
+        city,
+        country,
       },
       {
         headers: {
@@ -126,22 +141,38 @@ return (
   <div className="register-wrap">
     <form onSubmit={handleSubmit} className="register-form">
       <label>
-        <div className="label-text">Firstname:</div>
-        <input type="text" placeholder="Enter Firstname" value={firstName} onChange={handleFirstNameChange} />
+        <div className="label-text">Name:</div>
+        <input type="text" placeholder="Enter Name" value={Name} onChange={handleFirstNameChange} />
          <div className="error-message">{firstNameError}</div>
       </label>
 
       <label>
-        <div className="label-text">Lastname:</div>
-        <input type="text" placeholder="Enter Lastname" value={lastName} onChange={handleLastNameChange} />
+        <div className="label-text">Username:</div>
+        <input type="text" placeholder="Enter Username" value={userName} onChange={handleLastNameChange} />
          <div className="error-message">{lastNameError}</div>
       </label>
+    
+      <label>
+  <div className="label-text">Address:</div>
+  <input type="text" placeholder="Enter Address" value={address} onChange={handleAddressChange} />
+</label>
+
+      <label>
+  <div className="label-text">City:</div>
+  <input type="text" placeholder="Enter City" value={city} onChange={handleCityChange} />
+</label>
+
+<label>
+  <div className="label-text">Country:</div>
+  <input type="text" placeholder="Enter Country" value={country} onChange={handleCountryChange} />
+</label>
 
       <label>
         <div className="label-text">Email:</div>
         <input type="text"  placeholder="Enter Email" value={email} onChange={handleEmailChange} />
       </label>
       <div className="error-message">{emailError}</div>
+        
         
       <label>
         <div className="label-text">Password:</div>
