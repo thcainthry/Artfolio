@@ -31,17 +31,17 @@ const ContactUsForm = () => {
       onSubmit={handleFormSubmit}
     >
       <Form>
-        <div>
+        <div className='formc'>
           <label htmlFor="name">Name:</label>
           <Field type="text" id="name" name="name" required />
           <ErrorMessage name="name" component="div" />
         </div>
-        <div>
+        <div className='formc'>
           <label htmlFor="email">Email:</label>
           <Field type="email" id="email" name="email" required />
           <ErrorMessage name="email" component="div" />
         </div>
-        <div>
+        <div className='formc'>
           <label htmlFor="message">Message:</label>
           <Field as="textarea" id="message" name="message" required />
           <ErrorMessage name="message" component="div" />
