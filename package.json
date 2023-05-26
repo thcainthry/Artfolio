@@ -31,6 +31,7 @@
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
         "dotenv": "^10.0.0",
+        "expres": "^0.0.5",
         "express": "^4.18.2",
         "express-async-errors": "^3.1.1",
         "express-mongo-sanitize": "^2.1.0",
@@ -48,12 +49,10 @@
         "moment": "^2.29.1",
         "mongoose": "^6.0.13",
         "morgan": "^1.10.0",
-
+        "mysql": "^2.18.1",
+        "react-icons": "^4.8.0",
         "react-router-dom": "^6.11.2",
         "react-scripts": "^5.0.1",
-
-        "react-icons": "^4.8.0",
-
         "stream-http": "^3.2.0",
         "url": "^0.11.0",
         "validator": "^13.7.0",
