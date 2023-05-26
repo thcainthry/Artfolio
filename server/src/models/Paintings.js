@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Painting = sequelize.define("Paintings", {
+    const Paintings = sequelize.define("Paintings", {
       fotoja_piktures: {
         type: DataTypes.BLOB('long'),
         allowNull: false
@@ -39,6 +39,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     });
   
-    return Painting;
+    return Paintings;
   };
   

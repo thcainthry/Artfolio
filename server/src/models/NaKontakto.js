@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Nakontakto = sequelize.define("Nakontakto", {
+    const Na_kontakto = sequelize.define("Na_kontakto", {
       name: {
         type: DataTypes.STRING(100),
         primaryKey: true,
@@ -26,6 +26,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     });
   
-    return Nakontakto;
+    return Na_kontakto;
   };
   

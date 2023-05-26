@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/ContactUsForm", (req, res) => {
-  const q = "SELECT * FROM nakontakto;";
+  const q = "SELECT * FROM Na_kontaktos;";
   con.query(q, (err, data) => {
     if (err) {
       console.log(err);
@@ -39,7 +39,7 @@ app.get("/ContactUsForm", (req, res) => {
 
 app.post("/ContactUsForm", (req, res) => {
   const { name, email, message } = req.body;
-  const q = `INSERT INTO nakontakto (name, email, message) VALUES ('${name}', '${email}', '${message}')`;
+  const q = `INSERT INTO Na_kontaktos(name, email, message) VALUES ('${name}', '${email}', '${message}')`;
   con.query(q, (err, result) => {
     if (err) {
       console.log(err);

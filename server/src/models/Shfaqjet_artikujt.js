@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const ShfaqjetArtikujt = sequelize.define("ShfaqjetArtikujt", {
+    const Shfaqjet_artikujt = sequelize.define("Shfaqjet_artikujt", {
       emri_shfaqjes: {
         type: DataTypes.STRING(255),
         allowNull: false,
@@ -32,6 +32,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     });
   
-    return ShfaqjetArtikujt;
+    return Shfaqjet_artikujt;
   };
   
