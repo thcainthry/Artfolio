@@ -138,5 +138,6 @@ main {
 
 .buttons .btn:hover {
 	background-color: var(--main-color);
-	color: #A62317;
+	color: #610404;
+	font-weight: bold;
 }

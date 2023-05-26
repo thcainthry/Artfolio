@@ -45,11 +45,6 @@ const links = [
                         <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-4--v1.png" alt="avatar" className="avatar rounded-circle" />
                     </span>
                     <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                        <li>
-                            <a className="dropdown-item" href="/my-account">
-                                Profile
-                            </a>
-                        </li>
                        
                         <li>
                             <button className="dropdown-item">

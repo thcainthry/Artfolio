@@ -27,3 +27,15 @@ Pjesë e ekspozitës “ MONUMENTET E TRASHËGIMISË KULTURORE NË KOSOVË PËRM
 Ekspozita tradicionale “Ditët e kulturës 2022”- Ferizaj
 //       'https://www.facebook.com/photo/?fbid=2064289913731264&set=a.128941320599476'
 Ekspozita "Më shumë se kaq...", kushtuar Ditës Ndërkombëtare të Gruas.
+
+
+ <a href={c1}>Connected By Blood</a>
+                      <a href={c2}>En Rouge</a>
+                      <a href={c3}>Fossils</a>
+                      <a href={c4}>Instrumentalism</a>
+                      <a href={c5}>No Collection</a>
+                      <a href={c6}>Portraits</a>
+                      <a href={c7}>The Conductor And His Orchestra</a>
+                      <a href={c8}>The Lines Of The Blind</a>
+                      <a href={c9}>The Red Beret</a>
+                      <a href={c10}>The Vanity of Existence</a>

@@ -8,8 +8,8 @@ import './style.css'
 const images = [
   {
     src: img1,
-    alt: ".",
-    text: ".",
+    alt: "...",
+    text: "...",
   
   },
   {

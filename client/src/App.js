@@ -24,6 +24,7 @@ import "./styles.css";
 
 import Navbar from "./components/environments/Navbar.js";
 import Footer from "./components/environments/Footer.js";
+import Collections from "./components/Pages/Collections.jsx";
 
 import {
   BrowserRouter as Router,
@@ -43,7 +44,7 @@ export default function App() {
             <>
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/users" component={Users} />
-              <Route path="/product" component={Products} />
+              <Route path="/products" component={Products} />
               <Nav />
             </>
           ) : (
@@ -58,10 +59,15 @@ export default function App() {
           <Route exact path="/About" component={About}/>
           <Route exact path="/Exhibition" component={Exhibition}/>
           <Route exact path="/LandingPage" component={ LandingPage } />
-          <Route path="/LoginPage" component={ LoginPage } />
-          <Route path="/SignUp" component={ SignUp } />
-          <Route path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
-          <Route path="/Contact" component={Contact} />
+
+          <Route exact path="/LoginPage" component={ LoginPage } />
+          <Route exact path="/Buy" component={ Buy } />
+          <Route exact path="/SignUp" component={ SignUp } />
+          <Route exact path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
+          <Route exact path="/Contact" component={Contact} />
+          <Route exact path="/Collections" component={Collections} />
+
+        
           <Footer />
           </div>
             </>
@@ -69,6 +75,7 @@ export default function App() {
           )}
 
 
+>>
         </Switch>
     </Router>
   );
