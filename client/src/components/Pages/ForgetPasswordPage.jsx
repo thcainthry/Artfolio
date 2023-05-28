@@ -19,7 +19,7 @@ export default function ForgetPasswordPage() {
             </form>
             <footer className='forget-footer'>
                 <p>First time? <Link to="/SignUp">Create an account</Link>.</p>
-                <p><Link to="/LangingPage">Back to Homepage</Link>.</p>
+                <p><Link to="/LandingPage">Back to Homepage</Link>.</p>
             </footer>
         </div>
     )
