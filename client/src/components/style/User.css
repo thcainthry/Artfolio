@@ -13,7 +13,7 @@
     font-weight: bold;
   }
   .user>select{
-    width: 100px;
+    width: 160px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -37,12 +37,16 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+
   }
   
   th,
   td {
     padding: 10px;
     text-align: left;
+      border: 1px solid #ccc;
+
   }
   
   th {

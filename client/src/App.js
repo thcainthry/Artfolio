@@ -35,7 +35,7 @@ import {
 } from "react-router-dom";
 
 export default function App() {
-  const isAdmin = false; 
+  const isAdmin = true; 
   return (
     <Router>
         <Switch>

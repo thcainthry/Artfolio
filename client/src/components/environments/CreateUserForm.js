@@ -101,7 +101,7 @@ const CreateUserForm = ({ addUser }) => {
         </select>
       </div>
       <div className='user'>
-      <button  type="submit">Create User</button>
+      <button  type="submit">Create </button>
       </div>
     </form>
     </div>
