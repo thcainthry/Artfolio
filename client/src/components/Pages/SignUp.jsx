@@ -139,8 +139,9 @@ function SignUp() {
   
 return (
   <div className='register-reg'>
-    <h1>Register now</h1>
+
   <div className="register-wrap">
+  <h1>Register now</h1>
     <form onSubmit={handleSubmit} className="register-form">
       <label>
         <div className="label-text">Name:</div>

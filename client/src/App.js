@@ -59,9 +59,7 @@ export default function App() {
           <Route exact path="/About" component={About}/>
           <Route exact path="/Exhibition" component={Exhibition}/>
           <Route exact path="/LandingPage" component={ LandingPage } />
-
           <Route exact path="/LoginPage" component={ LoginPage } />
-          <Route exact path="/Buy" component={ Buy } />
           <Route exact path="/SignUp" component={ SignUp } />
           <Route exact path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
           <Route exact path="/Contact" component={Contact} />
@@ -75,7 +73,7 @@ export default function App() {
           )}
 
 
->>
+
         </Switch>
     </Router>
   );

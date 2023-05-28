@@ -15,7 +15,7 @@
     margin-bottom: 30px;
   }
   .contact-us-container form {
-  padding-left: 50px;
+  padding-left: 150px;
   padding-right: 150px;
   }
   .formc {
@@ -34,14 +34,26 @@
     
   }
   
-  .formc>input[type="text"],.formc>input[type="email"],
-textarea {
-  text-align: center;
-  padding: 8px;
-  width: 180%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+  .formc > input[type="text"],
+  .formc > input[type="email"] {
+    text-align: left;
+    padding: 8px;
+    width: 280px; /* Adjust the width to your preference */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .formc > textarea {
+    text-align: left;
+    padding: 8px;
+    width: 100%; /* Adjust the width to your preference */
+    max-width: none; /* Add this line */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize:both; /* Allow vertical resizing */
+
   }
   
   button[type="submit"]{
