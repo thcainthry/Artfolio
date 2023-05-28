@@ -5,27 +5,32 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       data_fillimit: {
         type: DataTypes.DATE,
         allowNull: false,
         validate: {
           notEmpty: true,
-          isDate: true
-        }
+          isDate: true,
+        },
       },
       data_mbarimit: {
         type: DataTypes.DATE,
         allowNull: false,
         validate: {
           notEmpty: true,
-          isDate: true
-        }
-      }
-    });
-  
-    return Koleksionet;
-  };
+          isDate: true,
+        },
+      },
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Koleksionet;
+};
+
   

@@ -5,27 +5,31 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       password: {
         type: DataTypes.STRING(255),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       email: {
         type: DataTypes.STRING(40),
         allowNull: false,
         validate: {
           notEmpty: true,
-          isEmail: true
-        }
-      }
-    });
-  
-    return Admins;
-  };
-  
+          isEmail: true,
+        },
+      },
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Admins;
+};
+
   

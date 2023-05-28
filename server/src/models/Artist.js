@@ -5,32 +5,37 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       mbiemri_artistit: {
         type: DataTypes.STRING(40),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       vendi_lindjes: {
         type: DataTypes.STRING(40),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       biografia: {
         type: DataTypes.STRING(500),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
-      }
-    });
-  
-    return Artist;
-  };
+          notEmpty: true,
+        },
+      },
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Artist;
+};
+
   

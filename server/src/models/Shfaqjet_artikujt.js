@@ -30,8 +30,13 @@ module.exports = (sequelize, DataTypes) => {
           isDate: true
         }
       }
-    });
-  
-    return Shfaqjet_artikujt;
-  };
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Shfaqjet_artikujt;
+};
+
   

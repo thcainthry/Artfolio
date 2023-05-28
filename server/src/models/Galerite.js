@@ -5,48 +5,53 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       vendi: {
         type: DataTypes.STRING(40),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       data_fillimit_g: {
         type: DataTypes.DATE,
         allowNull: false,
         validate: {
           notEmpty: true,
-          isDate: true
-        }
+          isDate: true,
+        },
       },
       data_mbarimit_g: {
         type: DataTypes.DATE,
         allowNull: false,
         validate: {
           notEmpty: true,
-          isDate: true
-        }
+          isDate: true,
+        },
       },
       koleksioni_shfaqur: {
         type: DataTypes.STRING(100),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       piktura_shfaqur: {
         type: DataTypes.STRING(40),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
-      }
-    });
-  
-    return Galerite;
-  };
+          notEmpty: true,
+        },
+      },
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Galerite;
+};
+
   

@@ -1,5 +1,9 @@
 const express = require("express");
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./src/models");
 const { Users } = require("./src/models");
@@ -9,8 +13,14 @@ app.get("/", (req, res) => {
   console.log("It's working");
 });
 
-app.get("/select", (req, res) => {
-  res.send("select");
+app.get("/selectUsers", (req, res) => {
+  Users.findAll().then((users)=>{
+    res.send(users);
+  })
+  .catch((err)=>{
+  console.log(err);
+  res.status(500).send("Internal Server Error");
+});
 });
 
 app.get("/insert", (req, res) => {
@@ -19,7 +29,7 @@ app.get("/insert", (req, res) => {
     mbiemri: "Osmanaj",
     username: "DoresaO",
     password: "Doresapassword",
-    email: "doresaosmanaj@gami.com",
+    email: "doresaosmanaj@gmail.com",
     ditelindja: new Date("1990-01-01"),
 
   })
@@ -39,7 +49,7 @@ app.get("/insert1", (req, res) => {
     mbiemri: "Berisha",
     username: "EB",
     password: "Erionapassword",
-    email: "eriona.berisha@gami.com",
+    email: "eriona.berisha@gmail.com",
     ditelindja: new Date("1990-01-01"),
 
   })
@@ -60,7 +70,7 @@ app.get("/insert2", (req, res) => {
     mbiemri: "Hasani",
     username: "FH",
     password: "Florindapassword",
-    email: "florinda.hasani@gami.com",
+    email: "florinda.hasani@gmail.com",
     ditelindja: new Date("1990-01-01"),
 
   })
@@ -80,7 +90,7 @@ app.get("/insert3", (req, res) => {
     mbiemri: "Hyseni",
     username: "MH",
     password: "Muhamedpassword",
-    email: "muhamed.hyseni@gami.com",
+    email: "muhamed.hyseni@gmail.com",
     ditelindja: new Date("1990-01-01"),
 
   })
@@ -100,7 +110,7 @@ app.get("/insert4", (req, res) => {
     mbiemri: "Berisha",
     username: "MB",
     password: "Muratpassword",
-    email: "murat.berisha@gami.com",
+    email: "murat.berisha@gmail.com",
     ditelindja: new Date("1990-01-01"),
 
   })
@@ -114,9 +124,22 @@ app.get("/insert4", (req, res) => {
     });
 });
 
+app.get("/deleteUser", (req, res) => {
+  Users.destroy({ where: { emri: "Doresa" } })
+    .then(() => {
+      res.send("User deleted");
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Internal Server Error");
+    });
+});
+
+
+
 db.sequelize.sync().then(() => {
-  app.listen(5000, () => {
-    console.log("Server is running on port 5000.");
+  app.listen(5001, () => {
+    console.log("Server is running on port 5001.");
   });
 });
 

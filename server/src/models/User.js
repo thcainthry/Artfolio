@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       username: {
         type: DataTypes.STRING(40),
-        primaryKey: true, // Designate 'username' as the primary key
+        primaryKey: true,
         allowNull: false,
         validate: {
           notEmpty: true
@@ -45,9 +45,14 @@ module.exports = (sequelize, DataTypes) => {
           isDate: true // Additional validation for date format
         }
       }
-    });
-  
-    return Users;
-  };
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Users;
+};
+
   
   

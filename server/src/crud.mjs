@@ -49,6 +49,22 @@ app.post("/ContactUsForm", (req, res) => {
   });
 });
 
+
+app.post("/users", (req, res) => {
+  const { emri, mbiemri, username, password, email, ditelindja } = req.body;
+  
+  const sql = "INSERT INTO Users (emri, mbiemri, username, password, email, ditelindja) VALUES (?, ?, ?, ?, ?, ?)";
+
+  con.query(sql, [emri, mbiemri, username, password, email, ditelindja], (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: "Failed to create user" });
+    }
+    res.status(201).json({ message: "User created successfully", userId: result.insertId });
+  });
+});
+
+
 app.listen(5000, () => {
   console.log("Server is running on port 5000.");
 });

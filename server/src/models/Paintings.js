@@ -37,8 +37,13 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: true
         }
       }
-    });
-  
-    return Paintings;
-  };
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Paintings;
+};
+
   

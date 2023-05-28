@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       email: {
         type: DataTypes.STRING(40),
@@ -14,18 +14,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           notEmpty: true,
-          isEmail: true
-        }
+          isEmail: true,
+        },
       },
       message: {
         type: DataTypes.STRING(400),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
-      }
-    });
-  
-    return Na_kontakto;
-  };
+          notEmpty: true,
+        },
+      },
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Na_kontakto;
+};
+
   

@@ -5,59 +5,62 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       mbiemri: {
         type: DataTypes.STRING(40),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       email: {
         type: DataTypes.STRING(40),
         allowNull: false,
         validate: {
           notEmpty: true,
-          isEmail: true
-        }
+          isEmail: true,
+        },
       },
       ditelindja: {
         type: DataTypes.DATE,
         allowNull: false,
         validate: {
           notEmpty: true,
-          isDate: true
-        }
+          isDate: true,
+        },
       },
       adresa: {
         type: DataTypes.STRING(255),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       zip_code: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
       },
       state: {
         type: DataTypes.STRING(255),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
+          notEmpty: true,
+        },
       },
       city: {
         type: DataTypes.STRING(255),
         allowNull: false,
         validate: {
-          notEmpty: true
-        }
-      }
-    });
-  
-    return Guest;
-  };
-  
+          notEmpty: true,
+        },
+      },
+    },
+    {
+      timestamps: false, // Exclude createdAt and updatedAt
+    }
+  );
+
+  return Guest;
+};
