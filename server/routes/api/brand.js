@@ -137,3 +137,72 @@ router.get(
     }
 );
 
+router.put('/:id',
+    auth,
+    role.check(ROLES.Admin),
+    async (req, res) => {
+        try{
+            const koleksionetId = req.params.id;
+            const update = req.body.koleksionet;
+            const query = {_id: koleksionetId};
+            const {slug} = req.body.koleksionet;
+        
+            const foundKoleksionet = await Koleksionet.findOne({
+                $or:[{slug}]
+            });
+
+            if(foundKoleksionet && foundKoleksionet._id !== koleksionetId){
+                return res.status(400).json({
+                    message: `Koleksioni me emrin ${slug} ekziston`
+                });
+            }
+            await Koleksionet.findOneAndUpdate(query, update, {
+                new: true
+            });
+
+            res.status(200).json({
+                success: true,
+                message: "Koleksioni u ndryshua me sukses"
+            });
+        }catch(error){
+            res.status(400).json({
+            error:"Your request could not be processed. Please try again."
+            });
+        }
+    }
+);
+
+router.put(
+    '/:id/active',
+    auth,
+    role.check(ROLES.Admin),
+    async (req, res) => {
+        try{
+            const koleksionetId = req.params.id;
+            const update = req.body.koleksionet;
+            const query = {_id: koleksionetId};
+
+            if(update.isActive){
+              const Pikturat = await Pikturat.find({
+                    koleksionet: koleksionetId
+              });
+              store.disableProduct(Pikturat);
+            }
+
+            await Koleksionet.findOneAndUpdate(query, update, {
+                new: true
+            });
+
+            res.status(200).json({
+                success: true,
+                message: "Koleksioni u ndryshua me sukses"
+            });
+        }catch(error){
+            res.status(400).json({
+            error:"Your request could not be processed. Please try again."
+            });
+        }
+    }
+);
+
+module.exports = router;
