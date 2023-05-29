@@ -1,5 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
     const Koleksionet = sequelize.define("Koleksionet", {
+      // leja 1 id secilit koleksion se duhet
+      
+      
       emri_koleksionit: {
         type: DataTypes.STRING(100),
         primaryKey: true,
