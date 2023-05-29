@@ -74,7 +74,7 @@ CREATE TABLE shfaqjet_artikujt(
         data_publikimit date,
         PRIMARY KEY(portali_tv)
 );
-create table Nakontakto(
+CREATE TABLE Na_kontakto(
 		name varchar(100),
         email varchar(40),
         message varchar(400),

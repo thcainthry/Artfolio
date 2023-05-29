@@ -27,17 +27,18 @@
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.20.2",
         "bootstrap": "^5.2.3",
-
         "boxicons": "^2.1.4",
-
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
         "dotenv": "^10.0.0",
+        "expres": "^0.0.5",
         "express": "^4.18.2",
         "express-async-errors": "^3.1.1",
         "express-mongo-sanitize": "^2.1.0",
         "express-rate-limit": "^6.0.4",
         "formik": "^2.2.9",
+        "fs": "^0.0.1-security",
+        "get": "^1.4.0",
         "helmet": "^5.0.1",
         "hero-slider": "^3.1.0",
         "http-status-codes": "^2.1.4",
@@ -50,20 +51,17 @@
         "moment": "^2.29.1",
         "mongoose": "^6.0.13",
         "morgan": "^1.10.0",
-
-        "react-bootstrap": "^2.7.4",
-
-
+        "mysql": "^2.18.1",
+        "path": "^0.12.7",
+        "react-icons": "^4.8.0",
         "react-router-dom": "^6.11.2",
         "react-scripts": "^5.0.1",
-
-
-        "react-icons": "^4.8.0",
-
+        "sequelize": "^6.31.1",
+        "sequelize-cli": "^6.6.0",
         "stream-http": "^3.2.0",
         "url": "^0.11.0",
         "validator": "^13.7.0",
         "xss-clean": "^0.1.1",
-        "yup": "^1.1.1"
+        "yup": "^1.2.0"
     }
 }

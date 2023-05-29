@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/ContactUsForm", (req, res) => {
-  const q = "SELECT * FROM nakontakto;";
+  const q = "SELECT * FROM Na_kontaktos;";
   con.query(q, (err, data) => {
     if (err) {
       console.log(err);
@@ -39,7 +39,7 @@ app.get("/ContactUsForm", (req, res) => {
 
 app.post("/ContactUsForm", (req, res) => {
   const { name, email, message } = req.body;
-  const q = `INSERT INTO nakontakto (name, email, message) VALUES ('${name}', '${email}', '${message}')`;
+  const q = `INSERT INTO Na_kontaktos(name, email, message) VALUES ('${name}', '${email}', '${message}')`;
   con.query(q, (err, result) => {
     if (err) {
       console.log(err);
@@ -48,6 +48,22 @@ app.post("/ContactUsForm", (req, res) => {
     return res.json(result);
   });
 });
+
+
+app.post("/users", (req, res) => {
+  const { emri, mbiemri, username, password, email, ditelindja } = req.body;
+  
+  const sql = "INSERT INTO Users (emri, mbiemri, username, password, email, ditelindja) VALUES (?, ?, ?, ?, ?, ?)";
+
+  con.query(sql, [emri, mbiemri, username, password, email, ditelindja], (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: "Failed to create user" });
+    }
+    res.status(201).json({ message: "User created successfully", userId: result.insertId });
+  });
+});
+
 
 app.listen(5000, () => {
   console.log("Server is running on port 5000.");
