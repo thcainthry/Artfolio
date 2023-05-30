@@ -1,111 +1,102 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import "../style/User.css";
 
-const CreateUserForm = ({ addUser }) => {
-  const [name, setName] = useState('');
+const CreateUserForm = ({ addUserForm }) => {
+  const [emri, setName] = useState('');
+  const [mbiemri, setLastName] = useState('');
   const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [role, setRole] = useState('');
-  const [city, setCity] = useState('');
-  const [address, setAddress] = useState('');
-  const [country, setCountry] = useState('');
+  const [ditelindja, setBirthday] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const newUser = { name, username, email, role, city, address, country };
-    addUser(newUser);
-    setName('');
-    setUsername('');
-    setEmail('');
-    setRole('');
-    setCity('');
-    setAddress('');
-    setCountry('');
+    try {
+      const newUser = { emri, mbiemri, username, password, email, ditelindja };
+      await axios.post("http://localhost:5000/CreateUserForm", newUser);
+      setName('');
+      setLastName('');
+      setUsername('');
+      setPassword('');
+      setEmail('');
+      setBirthday('');
+      alert('Form submitted successfully!');
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
     <div className='containerr'>
-    <form onSubmit={handleSubmit}>
-      <div className='user'>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-      </div>
-      <div className='user'>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-      </div>
-      <div className='user'>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-     
-      <div className='user'>
-        <label htmlFor="city">City:</label>
-        <input
-          type="text"
-          id="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          required
-        />
-      </div>
-      <div className='user'>
-        <label htmlFor="address">Address:</label>
-        <input
-          type="text"
-          id="address"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          required
-        />
-      </div>
-      <div className='user'>
-        <label  htmlFor="country">Country:</label>
-        <input
-          type="text"
-          id="country"
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
-          required
-        />
-      </div >
-      <div className='user'>
-        <label htmlFor="role">Role:</label>
-        <select
-          id="role"
-          value={role}
-          onChange={(event) => setRole(event.target.value)}
-          required
-        >
-          <option value="">Select Role</option>
-          <option value="Admin">Admin</option>
-          <option value="User">User</option>
-        </select>
-      </div>
-      <div className='user'>
-      <button  type="submit">Create </button>
-      </div>
-    </form>
+      <form onSubmit={handleSubmit}>
+        <div className='user'>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            value={emri}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div className='user'>
+          <label htmlFor="lastname">Lastname:</label>
+          <input
+            type="text"
+            id="lastname"
+            value={mbiemri}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </div>
+        <div className='user'>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
+        <div className='user'>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="text"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div className='user'>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className='user'>
+          <label htmlFor="birthday">Birthday:</label>
+          <input
+            type="text"
+            id="birthday"
+            value={ditelindja}
+            onChange={(e) => setBirthday(e.target.value)}
+            required
+          />
+        </div>
+        <div className='user'>
+          <button type="submit">Create</button>
+        </div>
+      </form>
     </div>
   );
 };
 
 export default CreateUserForm;
+
