@@ -1,15 +1,12 @@
 
-import{
-    config
-} from './credentials.js'
-
-const express = require('express');
-const mysql = require('mysql');
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+import express from "express";
+import mysql from "mysql";
+import bcrypt from "bcrypt";
+const saltRounds = 10;// is not used
 
 const app = express();
-const port = 5000;
+
+import { config } from '../db/credentials.mjs';
 
 const connection = mysql.createConnection({
   host: config.host,
@@ -51,6 +48,7 @@ app.post('/login', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
+
+app.listen(5000, () => {
+  console.log("Server is running on port 5000.");
 });

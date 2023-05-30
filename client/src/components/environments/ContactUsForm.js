@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useHistory } from 'react-router-dom';
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Name is required'),
@@ -12,12 +11,13 @@ const validationSchema = Yup.object({
 
 const ContactUsForm = () => {
   const [error, setError] = useState(false);
- const navigate = useHistory();
 
-  const handleFormSubmit = async (values) => {
+  const handleFormSubmit = async (values, { resetForm }) => {
     try {
       await axios.post("http://localhost:5000/ContactUsForm", values);
-      navigate("/");
+      resetForm();
+      setError(false);
+      alert('Form submitted successfully!');
     } catch (err) {
       console.log(err);
       setError(true);
@@ -54,4 +54,5 @@ const ContactUsForm = () => {
     </Formik>
   );
 };
+
 export default ContactUsForm;

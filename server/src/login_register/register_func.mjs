@@ -1,15 +1,10 @@
-
-import{
-    config
-} from './credentials.js'
-
-const express = require('express');
-const mysql = require('mysql');
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+import express from "express";
+import mysql from "mysql";
+import bcrypt from "bcrypt";
 
 const app = express();
-const port = 5000;
+
+import { config } from '../db/credentials.mjs';
 
 const connection = mysql.createConnection({
   host: config.host,
@@ -18,10 +13,11 @@ const connection = mysql.createConnection({
   database: config.database
 });
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/register', (req, res) => { //navigates to register page, route
+app.post('/register', (req, res) => {
   const { name, surname, username, email, birthday, password } = req.body;
 
   bcrypt.hash(password, saltRounds, (err, hash) => {
@@ -52,6 +48,6 @@ app.post('/register', (req, res) => { //navigates to register page, route
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+app.listen(5000, () => {
+  console.log("Server is running on port 5000.");
 });
