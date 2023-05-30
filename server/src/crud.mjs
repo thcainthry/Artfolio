@@ -30,8 +30,8 @@ app.get("/ContactUsForm", (req, res) => {
   const q = "SELECT * FROM Na_kontaktos;";
   con.query(q, (err, data) => {
     if (err) {
-      console.log(err);
-      return res.json(err);
+      console.error(err);
+      return res.status(500).json({ error: "Internal server error" });
     }
     return res.json(data);
   });
@@ -39,11 +39,11 @@ app.get("/ContactUsForm", (req, res) => {
 
 app.post("/ContactUsForm", (req, res) => {
   const { name, email, message } = req.body;
-  const q = `INSERT INTO Na_kontaktos(name, email, message) VALUES ('${name}', '${email}', '${message}')`;
-  con.query(q, (err, result) => {
+  const q = "INSERT INTO Na_kontaktos (name, email, message) VALUES (?, ?, ?)";
+  con.query(q, [name, email, message], (err, result) => {
     if (err) {
-      console.log(err);
-      return res.json(err);
+      console.error(err);
+      return res.status(500).json({ error: "Internal server error" });
     }
     return res.json(result);
   });

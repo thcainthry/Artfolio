@@ -1,8 +1,8 @@
 
 import React from 'react';
 import "../style/Footer.css";
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-
+import { MDBFooter,  MDBIcon } from 'mdb-react-ui-kit';
+//MDBContainer, MDBRow, MDBCol,
 export default function App() {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted publicfooter'>
