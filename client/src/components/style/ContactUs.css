@@ -42,13 +42,14 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+    
   }
   
   .formc > textarea {
     text-align: left;
     padding: 8px;
     width: 100%; /* Adjust the width to your preference */
-    max-width: none; /* Add this line */
+    max-width: 280px; /* Add this line */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
