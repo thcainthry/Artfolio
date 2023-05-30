@@ -69,7 +69,7 @@ function ShoppingCart({
 						</div>
 					))}
 					{products.length > 0 && (
-						<div>
+						<div className="butonat">
 							<span className="total-price">Total: {totalPrice}$</span>
 							<button className="btn checkout-btn">Proceed to checkout</button>
 						</div>
