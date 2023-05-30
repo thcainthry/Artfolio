@@ -164,7 +164,7 @@ export default function ActionAreaCard() {
             </Card>
           </div>
         </Link>
-        <Link to="/c6">
+        <Link to="/c7">
           <div className='container'>
             <Card sx={{ maxWidth: 1000 }}>
               <CardActionArea>
@@ -184,7 +184,7 @@ export default function ActionAreaCard() {
             </Card>
           </div>
         </Link>
-        <Link to="/c6">
+        <Link to="/c8">
           <div className='container'>
             <Card sx={{ maxWidth: 1000 }}>
               <CardActionArea>
@@ -204,7 +204,7 @@ export default function ActionAreaCard() {
             </Card>
           </div>
         </Link>
-        <Link to="/c6">
+        <Link to="/c9">
           <div className='container'>
             <Card sx={{ maxWidth: 1000 }}>
               <CardActionArea>
@@ -224,7 +224,7 @@ export default function ActionAreaCard() {
             </Card>
           </div>
         </Link>
-        <Link to="/c6">
+        <Link to="/c10">
           <div className='container'>
             <Card sx={{ maxWidth: 1000 }}>
               <CardActionArea>
