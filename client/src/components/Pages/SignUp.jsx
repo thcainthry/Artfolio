@@ -1,19 +1,22 @@
 import '../style/SignUpStyle.css';
 import React, { useState } from 'react';
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom"
 
 
 function SignUp() {
-  const [Name, setName] = useState('');
-  const [userName, setuserName] = useState('');
-  const [city, setCity] = useState('');
-  const [address, setAddress] = useState('');
-  const [country, setCountry] = useState('');
-  const [email, setEmail] = useState('');
+  const [emri, setName] = useState('');
+  const [mbiemri, setSurname] = useState('');
+  const [username, setuserName] = useState('');
   const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [ditelindja, setBirthday] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [NameError, setNameError] = useState("");
+  const [SurnameError, setSurnameError] = useState("");
   const [userNameError, setuserNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -36,6 +39,16 @@ function SignUp() {
       setNameError("Name must contain at least 3 alphanumeric characters");
     }
     }
+
+    function handleSurnameChange(event) {
+      setSurname(event.target.value);
+      setSurnameError("");
+      const pattern = /^[a-zA-Z0-9]{3,}$/;
+      if (!pattern.test(event.target.value)) {
+        setSurnameError("Surname must contain at least 3 alphanumeric characters");
+      }
+      }
+
     function handleuserNameChange(event) {
       setuserName(event.target.value);
       setuserNameError("");
@@ -77,7 +90,7 @@ function SignUp() {
     function handleSubmit(event) {
       event.preventDefault();
   
-      if (!Name || !userName || !email  || !password || !confirmPassword) {
+      if (!emri || !mbiemri || !username || !email  || !password || !confirmPassword) {
         setError("Please fill in all required fields");
         return;
       } else  if (NameError || userNameError || emailError  || passwordError) {
@@ -94,8 +107,9 @@ function SignUp() {
   
       // Send request to server using Axios
       axios.post("/auth/signup", {
-        Name,
-        userName,
+        emri,
+        mbiemri,
+        username,
         email,
         password,
         address,
@@ -144,14 +158,19 @@ return (
   <h1>Register now</h1>
     <form onSubmit={handleSubmit} className="register-form">
       <label>
-        <div className="label-text">Name:</div>
-        <input type="text" placeholder="Enter Name" value={Name} onChange={handleNameChange} />
+        <div className="label-text">Emri:</div>
+        <input type="text" placeholder="Enter Name" value={emri} onChange={handleNameChange} />
          <div className="error-message">{NameError}</div>
+      </label>
+      <label>
+        <div className="label-text">Mbiemri:</div>
+        <input type="text" placeholder="Enter Surname" value={mbiemri} onChange={handleSurnameChange} />
+         <div className="error-message">{SurnameError}</div>
       </label>
 
       <label>
         <div className="label-text">Username:</div>
-        <input type="text" placeholder="Enter Username" value={userName} onChange={handleuserNameChange} />
+        <input type="text" placeholder="Enter Username" value={username} onChange={handleuserNameChange} />
          <div className="error-message">{userNameError}</div>
       </label>
     
