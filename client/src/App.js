@@ -17,7 +17,7 @@ import Users from './components/Pages/Users.jsx';
 
 import "./styles.css";
 import Buy from './components/Pages/Buy.jsx';
-
+import Profile from './components/Pages/Profile.jsx';
 
 import "./styles.css";
  
@@ -25,6 +25,7 @@ import "./styles.css";
 import Navbar from "./components/environments/Navbar.js";
 import Footer from "./components/environments/Footer.js";
 import Collections from "./components/Pages/Collections.jsx";
+
 
 import {
   BrowserRouter as Router,
@@ -64,7 +65,9 @@ export default function App() {
           <Route exact path="/ForgetPasswordPage" component={ ForgetPasswordPage } />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Collections" component={Collections} />
-
+          <Route exact path="/Profile" component={Profile} />
+         
+  
         
           <Footer />
           </div>
