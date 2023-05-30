@@ -44,6 +44,34 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: true,
           isDate: true // Additional validation for date format
         }
+      },
+      address:{
+        type: DataTypes.STRING(40),
+        allowNull: false,
+        validate: {
+          notEmpty: true
+        }
+      },
+      city:{
+        type: DataTypes.STRING(40),
+        allowNull: false,
+        validate:{
+          notEmpty: true
+        }
+      },
+      country:{
+        type: DataTypes.STRING(40),
+        allowNull: false,
+        validate:{
+          notEmpty: true
+        }
+      },
+      confirmPassword:{ 
+      type: DataTypes.STRING(225),
+      allowNull: false,
+      validate:{
+        notEmpty: true
+        }
       }
     },
     {
