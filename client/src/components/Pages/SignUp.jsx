@@ -28,14 +28,7 @@ function SignUp() {
   const [countryError, setCountryError] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
 
-  function handleAddressChange(event) {
-    setAddress(event.target.value);
-  }
-  
-  function handleCountryChange(event) {
-    setCountry(event.target.value);
-  }
-  
+
   function handleNameChange(event) {
     setName(event.target.value);
     setNameError("");
@@ -53,7 +46,7 @@ function SignUp() {
       setSurnameError("Surname must contain at least 3 alphanumeric characters");
     }
   }
-
+ 
   function handleuserNameChange(event) {
     setuserName(event.target.value);
     setuserNameError("");
@@ -62,11 +55,6 @@ function SignUp() {
       setuserNameError("Username must contain at least 3 alphanumeric characters");
     }
   }
-
-  function handleCityChange(event) {
-    setCity(event.target.value);
-  }
-
   function handlePasswordChange(event) {
     setPassword(event.target.value);
     setPasswordError("");
@@ -78,11 +66,6 @@ function SignUp() {
     }
   }
 
-  function handleConfirmPasswordChange(event) {
-    setConfirmPassword(event.target.value);
-    setConfirmPasswordError("");
-  }
-
   function handleEmailChange(event) {
     setEmail(event.target.value);
     setEmailError("");
@@ -91,6 +74,7 @@ function SignUp() {
       setEmailError("Please enter a valid email address");
     }
   }
+
 
   function handleBirthdayChange(event) {
     setBirthday(event.target.value);
@@ -101,6 +85,44 @@ function SignUp() {
       setBirthdayError("Please format YYYY-MM-DD");
     }
   }
+  
+  function handleAddressChange(event) {
+    setAddress(event.target.value);
+    setAddressError("");
+    const pattern = /^[a-zA-Z0-9]{3,}$/;
+    if (!pattern.test(event.target.value)) {
+      setAddressError("Address must contain at least 3 alphanumeric characters");
+    }
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+    setCityError("");
+    const pattern = /^[a-zA-Z0-9]{3,}$/;
+    if (!pattern.test(event.target.value)) {
+      setCityError("City must contain at least 3 alphanumeric characters");
+    }
+  }
+  function handleCountryChange(event) {
+    setCountry(event.target.value);
+    setCountryError("");
+    const pattern = /^[a-zA-Z0-9]{3,}$/;
+    if (!pattern.test(event.target.value)) {
+      setCountryError("Country must contain at least 3 alphanumeric characters");
+    }
+  }
+  
+
+
+  function handleConfirmPasswordChange(event) {
+    setConfirmPassword(event.target.value);
+    setConfirmPasswordError("");
+    if (event.target.value !== password) {
+      setConfirmPasswordError("Passwords do not match");
+    }
+  }
+  
+  
 
   function handleSubmit(event) {
     event.preventDefault();
