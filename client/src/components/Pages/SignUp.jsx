@@ -135,11 +135,7 @@ function SignUp() {
       return;
     }
 
-    // Check if passwords match
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
+   
 
     // Send request to server using Axios
     axios.post("/auth/signup", {
