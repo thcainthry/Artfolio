@@ -1,7 +1,8 @@
 import React from 'react';
 import '../style/Home.css';
-import Exhibition from './Exhibition.jsx';
+import Collections  from './Collections';
 import Backgroundimage from '../assets/vllau.jpeg'
+
 
 const HomePage = () => {
   return (
@@ -11,7 +12,7 @@ const HomePage = () => {
       <div className="content">
         <h1 className="title">Welcome to my Gallery</h1>
         <p className="subtitle">I am an artist and painter, creating beautiful pieces of art that reflect my passion and creativity. Browse my portfolio to discover a world of imagination and inspiration.</p>
-        <a href="/Exhibition" element={<Exhibition />}>
+        <a href="/Collections" element={<Collections />}>
         <button className="cta-button">View Gallery</button>
         </a>
       </div>
