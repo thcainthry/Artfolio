@@ -66,13 +66,7 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: true
         }
       },
-      confirmPassword:{ 
-      type: DataTypes.STRING(225),
-      allowNull: false,
-      validate:{
-        notEmpty: true
-        }
-      }
+     
     },
     {
       timestamps: false, // Exclude createdAt and updatedAt

@@ -37,8 +37,8 @@
   
   .cta-button {
     display: inline-block;
+    background-color: transparent;
     padding: 1.25rem 2rem;
-    background-color: #fff;
     color: #000;
     font-size: 1.25rem;
     font-weight: 21px;
@@ -51,5 +51,8 @@
   .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #610404;
+    transition: all 0.2s ease-in-out;
+    color: white;
   }
   
