@@ -1,7 +1,8 @@
-import express from "express";
-import mysql from "mysql2";
-import cors from "cors";
-import { config } from './db/credentials.mjs';
+const express = require("express");
+const mysql = require("mysql2");
+const cors = require("cors");
+const { config } = require('./db/credentials');
+
 
 const app = express();
 app.use(cors());
@@ -110,6 +111,7 @@ app.post("/Users", (req, res) => {
     }
   );
 });
+
 
 
 app.listen(5000, () => {
