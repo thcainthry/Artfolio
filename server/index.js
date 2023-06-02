@@ -31,6 +31,9 @@ app.get("/insert", (req, res) => {
     password: "Doresapassword",
     email: "doresaosmanaj@gmail.com",
     ditelindja: new Date("1990-01-01"),
+    address:"10000",
+    city:"Prishtine",
+    country:"Kosovo",
 
   })
     .then(() => {
@@ -51,6 +54,9 @@ app.get("/insert1", (req, res) => {
     password: "Erionapassword",
     email: "eriona.berisha@gmail.com",
     ditelindja: new Date("1990-01-01"),
+    address:"10000",
+    city:"Prishtine",
+    country:"Kosovo",
 
   })
     .then(() => {
@@ -72,6 +78,9 @@ app.get("/insert2", (req, res) => {
     password: "Florindapassword",
     email: "florinda.hasani@gmail.com",
     ditelindja: new Date("1990-01-01"),
+    address:"10000",
+    city:"Prishtine",
+    country:"Kosovo",
 
   })
     .then(() => {
@@ -92,6 +101,9 @@ app.get("/insert3", (req, res) => {
     password: "Muhamedpassword",
     email: "muhamed.hyseni@gmail.com",
     ditelindja: new Date("1990-01-01"),
+    address:"10000",
+    city:"Prishtine",
+    country:"Kosovo",
 
   })
     .then(() => {
@@ -112,6 +124,9 @@ app.get("/insert4", (req, res) => {
     password: "Muratpassword",
     email: "murat.berisha@gmail.com",
     ditelindja: new Date("1990-01-01"),
+    address:"10000",
+    city:"Prishtine",
+    country:"Kosovo",
 
   })
     .then(() => {

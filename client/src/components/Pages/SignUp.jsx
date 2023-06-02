@@ -89,7 +89,7 @@ function SignUp() {
   function handleAddressChange(event) {
     setAddress(event.target.value);
     setAddressError("");
-    const pattern = /^[a-zA-Z0-9]{3,}$/;
+    const pattern = /^[a-zA-Z0-9\s]{3,}$/;
     if (!pattern.test(event.target.value)) {
       setAddressError("Address must contain at least 3 alphanumeric characters");
     }
@@ -138,7 +138,7 @@ function SignUp() {
    
 
     // Send request to server using Axios
-    axios.post("/auth/signup", {
+    axios.post("http://localhost:5000/Users", {
       emri,
       mbiemri,
       username,

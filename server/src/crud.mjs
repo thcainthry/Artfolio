@@ -2,7 +2,6 @@ import express from "express";
 import mysql from "mysql2";
 import cors from "cors";
 import { config } from './db/credentials.mjs';
-import { data } from "jquery";
 
 const app = express();
 app.use(cors());
@@ -25,6 +24,7 @@ con.connect((err) => {
 
 app.get("/", (req, res) => {
   res.json("Hi, we are working on the backend.");
+  console.log("It's working");
 });
 
 app.get("/ContactUsForm", (req, res) => {
@@ -38,17 +38,6 @@ app.get("/ContactUsForm", (req, res) => {
   });
 });
 
-//is never used, and is called in the front but the front is never used
-app.get("/CreateUserForm",(req,res)=>{
-  const q="SELECT * FROM USERS;";
-  con.query(q,(err,data)=>{
-    if (err) {
-      console.error(err);
-      return res.status(500).json({ error: "Internal server error" });
-    }
-     return res.json(data);
-  });
-});
 
 app.post("/ContactUsForm", (req, res) => {
   const { name, email, message } = req.body;
@@ -59,6 +48,18 @@ app.post("/ContactUsForm", (req, res) => {
       return res.status(500).json({ error: "Internal server error" });
     }
     return res.json(result);
+  });
+});
+
+//is never used, and is called in the front but the front is never used
+app.get("/CreateUserForm",(req,res)=>{
+  const q="SELECT * FROM USERS;";
+  con.query(q,(err,data)=>{
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+     return res.json(data);
   });
 });
 
@@ -76,18 +77,38 @@ app.post("/CreateUserForm", (req, res) => {
 });
 
 
-app.post("/users", (req, res) => {
-  const { emri, mbiemri, username, password, email, ditelindja } = req.body;
-  
-  const sql = "INSERT INTO Users (emri, mbiemri, username, password, email, ditelindja) VALUES (?, ?, ?, ?, ?, ?)";
+app.get("/Users", (req, res) => {
+  const { emri, mbiemri, username, password, email, ditelindja, address, city, country } = req.body;
+  const sql = "SELECT * FROM USERS;";
 
-  con.query(sql, [emri, mbiemri, username, password, email, ditelindja], (err, result) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).json({ error: "Failed to create user" });
+  con.query(
+    sql,
+    [emri, mbiemri, username, password, email, ditelindja, address, city, country],
+    (err,data) => {
+      if (err) {
+        console.error(err);
+        return res.status(500).json({ error: "Internal server error"  });
+      }
+      return res.json(data);
     }
-    res.status(201).json({ message: "User created successfully", userId: result.insertId });
-  });
+  );
+});
+
+app.post("/Users", (req, res) => {
+  const { emri, mbiemri, username, password, email, ditelindja, address, city, country } = req.body;
+ const sql = "INSERT INTO Users (emri, mbiemri, username, password, email, ditelindja, address, city, country) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+  con.query(
+    sql,
+    [emri, mbiemri, username, password, email, ditelindja, address, city, country],
+    (err) => {
+      if (err) {
+        console.error(err);
+        return res.status(500).json({ error: "Registration failed, please try again or contact support for assistance" });
+      }
+      res.status(200).json({ message: "Registration successful" });
+    }
+  );
 });
 
 
