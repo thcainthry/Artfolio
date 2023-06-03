@@ -3,6 +3,7 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { useHistory } from "react-router-dom";
 import '../style/Login.css';
+import authLogin from '../../../../server/src/login_register/login_form_auth'
 const token = localStorage.getItem("token");
 const UserContext = createContext();
 
@@ -116,7 +117,7 @@ function LoginForm() {
         </div>
         </label>
         
-        <button type="submit">Log in</button>
+        <button type="submit" id="login-button">Log in</button>
         {errorMessage && <p className="error">{errorMessage}</p>}
         
         <a href="/SignUp" class="register">No account? Sign up here</a>
@@ -125,9 +126,16 @@ function LoginForm() {
     
     </div>
   );
+
+  }
+function handleClick(){
+  var authScript = document.createElement('script');
+  authScript.src = {authLogin};
+
+  document.body.appendChild(authScript);
 }
-
-
+const button = document.getElementById('login-button');
+button.addEventListener('click', handleClick);
 function ForgetPasswordLink() {
   return (
     <a href="/ForgetPasswordPage">
