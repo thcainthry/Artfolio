@@ -1,12 +1,11 @@
-
-import express from "express";
-import mysql from "mysql";
-import bcrypt from "bcrypt";
+const express = require("express");
+const mysql = require ("mysql2");
+const bcrypt =require ("bcrypt");
 const saltRounds = 10;// is not used
 
 const app = express();
 
-import { config } from '../db/credentials.mjs';
+const { config } = require('./db/credentials');
 
 const connection = mysql.createConnection({
   host: config.host,

@@ -20,7 +20,7 @@ const myMiddleware = (req, res, next) => {
   };
   
   // Express.js example
-  import express from "express";
+  const express = require("express");
   const app = express();
   
   // Apply the middleware to all routes

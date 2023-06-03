@@ -23,7 +23,7 @@ app.get("/selectUsers", (req, res) => {
 });
 });
 
-app.get("/insert", (req, res) => {
+app.get("/insertUser", (req, res) => {
   Users.create({
     emri: "Doresa",
     mbiemri: "Osmanaj",
@@ -46,7 +46,7 @@ app.get("/insert", (req, res) => {
     });
 });
 
-app.get("/insert1", (req, res) => {
+app.get("/insertUser1", (req, res) => {
   Users.create({
     emri: "Eriona",
     mbiemri: "Berisha",
@@ -70,7 +70,7 @@ app.get("/insert1", (req, res) => {
 
 });
 
-app.get("/insert2", (req, res) => {
+app.get("/insertUser2", (req, res) => {
   Users.create({
     emri: "Florinda",
     mbiemri: "Hasani",
@@ -93,7 +93,7 @@ app.get("/insert2", (req, res) => {
     });
 });
 
-app.get("/insert3", (req, res) => {
+app.get("/insertUser3", (req, res) => {
   Users.create({
     emri: "Muhamed",
     mbiemri: "Hyseni",
@@ -116,7 +116,7 @@ app.get("/insert3", (req, res) => {
     });
 });
 
-app.get("/insert4", (req, res) => {
+app.get("/insertUser4", (req, res) => {
   Users.create({
     emri: "Murat",
     mbiemri: "Berisha",
