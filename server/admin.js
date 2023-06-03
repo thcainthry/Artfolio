@@ -2,7 +2,7 @@ const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
 const { config } = require('./src/db/credentials.js');
-const { Admins} = require ('./src/models/Admins.js');
+const { Admins} = require ('./src/models/Admins');
 
 const app = express();
 app.use(cors());
