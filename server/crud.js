@@ -1,7 +1,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
-const { config } = require('./db/credentials');
+const { config } = require('./src/db/credentials.js');
 
 
 const app = express();

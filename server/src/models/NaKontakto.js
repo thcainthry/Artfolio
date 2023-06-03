@@ -2,7 +2,6 @@ module.exports = (sequelize, DataTypes) => {
     const Na_kontakto = sequelize.define("Na_kontakto", {
       name: {
         type: DataTypes.STRING(100),
-        primaryKey: true,
         allowNull: false,
         validate: {
           notEmpty: true,
@@ -10,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
       },
       email: {
         type: DataTypes.STRING(40),
-        primaryKey: true,
         allowNull: false,
         validate: {
           notEmpty: true,
