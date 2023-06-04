@@ -3,7 +3,7 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { useHistory } from "react-router-dom";
 import '../style/Login.css';
-const token = localStorage.getItem("token");
+//const token = localStorage.getItem("token");
 const UserContext = createContext();
 
 export default function SignInPage() {
