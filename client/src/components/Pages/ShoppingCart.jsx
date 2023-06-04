@@ -92,7 +92,7 @@ const handleCheckout = () => {
 						</div>
 					))}
 					{products.length > 0 && (
-						<div className="butonat">
+						<div >
 							<span className="total-price">Total: {totalPrice}$</span>
 					
 							<button
