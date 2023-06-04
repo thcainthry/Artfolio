@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/ShoppingCart.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -15,7 +15,30 @@ function ShoppingCart({
 		(total, product) => total + product.price * product.count,
 		0
 	);
+	const [isProcessing, setIsProcessing] = useState(false);
+	const isLoggedIn = true;//qeto me ndrru me ba prej authentication me mor kur bahet login user
+const handleCheckout = () => {
+	if (isLoggedIn) {
+		if (products.length > 0) {
+			// Proceed with the checkout process
+			setIsProcessing(true);
 
+			// Add your logic here for processing the checkout
+			// For example, you can display a success message and clear the cart
+			alert("Checkout completed successfully!");
+			const allProducts = [...products]; // Create a copy of the products array
+			allProducts.forEach((product) => onProductRemove(product));
+
+			setIsProcessing(false);
+			onClose();
+		} else {
+			alert("Your cart is empty. Please add some products.");
+		}
+	} else {
+		// Redirect to the login form
+		window.location.href = "/LandingPage"; // Replace with the appropriate route
+	}
+};
 	return (
 		<div
 			className="modal"
@@ -69,9 +92,16 @@ function ShoppingCart({
 						</div>
 					))}
 					{products.length > 0 && (
-						<div>
+						<div className="butonat">
 							<span className="total-price">Total: {totalPrice}$</span>
-							<button className="btn checkout-btn">Proceed to checkout</button>
+					
+							<button
+								className="btn checkout-btn"
+								onClick={handleCheckout}
+								disabled={isProcessing}
+							>
+								{isLoggedIn ? "Proceed to Checkout" : "Proceed to Checkout "}
+							</button>
 						</div>
 					)}
 				</div>
