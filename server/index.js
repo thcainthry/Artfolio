@@ -139,6 +139,29 @@ app.get("/insertUser4", (req, res) => {
     });
 });
 
+app.get("/insertUser5", (req, res) => {
+  Users.create({
+    emri: "Albiona",
+    mbiemri: "Berisha",
+    username: "AB",
+    password: "Albionapassword",
+    email: "albiona.berisha@gmail.com",
+    ditelindja: new Date("1990-01-01"),
+    address:"10000",
+    city:"Prishtine",
+    country:"Kosovo",
+
+  })
+    .then(() => {
+      console.log("User created successfully");
+      res.send("User created successfully");
+    })
+    .catch((err) => {
+      console.error("Error creating user:", err);
+      res.status(500).send("Error creating user");
+    });
+});
+
 app.get("/deleteUser", (req, res) => {
   Users.destroy({ where: { emri: "Doresa" } })
     .then(() => {

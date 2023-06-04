@@ -12,11 +12,6 @@ app.get("/", (req, res) => {
   res.json("Hi, we are working on the backend.");
   console.log("It's working");
 });
-
-app.get("/", (req, res) => {
-  res.json("Hi, we are working on the backend.");
-  console.log("It's working");
-});
   
 app.get("/selectAdmins", (req, res) => {
     Admins.findAll().then((admins)=>{

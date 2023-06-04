@@ -48,7 +48,7 @@ app.post("/ContactUsForm", (req, res) => {
       console.error(err);
       return res.status(500).json({ error: "Internal server error" });
     }
-    return res.json(result);
+    res.status(200).json({ message: "Sent successful" });
   });
 });
 

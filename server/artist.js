@@ -9,11 +9,6 @@ const db = require("./src/models");
 const { Artist } = require("./src/models");
 
 app.get("/", (req, res) => {
-  res.json("Hi, we are working on the backend.");
-  console.log("It's working");
-});
-
-app.get("/", (req, res) => {
   res.json("Hi, this is our artist biografi");
   console.log("It's working");
 });
