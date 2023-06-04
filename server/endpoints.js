@@ -112,6 +112,20 @@ app.post("/Users", (req, res) => {
   );
 });
 
+app.post("/CreateAdmin", (req, res) => {
+  const { admin_username, password, email } = req.body;
+  const query = "INSERT INTO Admins (admin_username, password, email) VALUES (?, ?, ?)";
+
+  con.query(query, [admin_username, password, email], 
+    (err) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+    res.status(200).json({ message: "Registration successful" });
+  });
+});
+
 
 
 app.listen(5000, () => {

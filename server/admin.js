@@ -1,26 +1,16 @@
 const express = require("express");
-const mysql = require("mysql2");
-const cors = require("cors");
-const { config } = require('./src/db/credentials.js');
-const { Admins} = require ('./src/models/Admins');
-
 const app = express();
-app.use(cors());
-app.use(express.json());
+const bodyParser = require('body-parser');
 
-const con = mysql.createConnection({
-  user: config.user,
-  password: config.password,
-  host: config.host,
-  database: config.database
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-con.connect((err) => {
-  if (err) {
-    console.log('Error connecting to database:', err);
-    return;
-  }
-  console.log('Connected to database.');
+const db = require("./src/models");
+const { Admins } = require("./src/models");
+
+app.get("/", (req, res) => {
+  res.json("Hi, we are working on the backend.");
+  console.log("It's working");
 });
 
 app.get("/", (req, res) => {
@@ -167,20 +157,6 @@ app.get("/selectAdmins", (req, res) => {
       });
   });
 
-  app.post("/CreateAdmin", (req, res) => {
-    const { admin_username, password, email } = req.body;
-    const query = "INSERT INTO Admins (admin_username, password, email) VALUES (?, ?, ?)";
-  
-    con.query(query, [admin_username, password, email], 
-      (err) => {
-      if (err) {
-        console.error(err);
-        return res.status(500).json({ error: "Internal server error" });
-      }
-      res.status(200).json({ message: "Registration successful" });
-    });
-  });
-  
   
   
   app.listen(5000, () => {
